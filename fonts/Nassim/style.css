@@ -1,0 +1,9 @@
+﻿@font-face {
+ font-family:"BBCNassim";
+ src: url( "fonts/BBCNassim.eot" );
+ src: local( "☺" ),
+ url( "fonts/BBCNassim.woff" )
+ format( "woff" ),
+ url( "fonts/BBCNassim.ttf" )
+ format( "truetype" );
+}
