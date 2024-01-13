@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="\front\dist\tailwind-o.css" rel="stylesheet" />
         <link href="/front/css/style.css" rel="stylesheet" />
-        <link
-            rel="stylesheet"
-            href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
-        />
+        <link href="/css/all.css" rel="stylesheet" />
+        <link href="/css/brands.css" rel="stylesheet" />
+        <link href="/css/regular.css" rel="stylesheet" />
+        <link href="/css/solid.css" rel="stylesheet" />
+        <link href="/css/all.min.css" rel="stylesheet" />
         <script src="/front/js/alpine.min.js" rel="stylesheet"></script>
         <script
             type="text/javascript"
@@ -17,6 +18,7 @@
         <script type="text/javascript" src="\front\js\jquery.min.js"></script>
         <script type="text/javascript" src="\front\js\TW.js"></script>
         <script type="text/javascript" src="/front/js/script.js"></script>
+
         <title>AyandeRoshan</title>
     </head>
 
@@ -115,8 +117,10 @@
                                 <div
                                     class="z-40 flex flex-col rounded-lg bg-gradient-to-b from-slate-50 from-80% to-slate-200 shadow-lg"
                                 >
-                                    <ul class="flex items-center">
-                                        <li
+                                    <div
+                                        class="flex items-center justify-center"
+                                    >
+                                        <div
                                             class="mx-5 my-3 h-14 w-14 overflow-hidden rounded-full bg-green-100/90"
                                         >
                                             <span class="">
@@ -126,25 +130,17 @@
                                                     alt="bagheri"
                                                 />
                                             </span>
-                                        </li>
-                                        <li class="flex justify-start">
-                                            <span
-                                                class="h-max w-max bg-transparent text-neutral-700"
-                                            >
-                                                نمونه هایی از تعهد، توانمندی، و
-                                                مشارکت سید علی باقری
-                                            </span>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                     <hr
-                                        class=": my-5 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
+                                        class="my-5 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
                                     />
                                     <ul
                                         class="mr-5 grid w-120 grid-cols-2 gap-5 text-neutral-700 last:col-span-2 last:mb-7"
                                     >
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a href="#aboutBagheri">
                                                 <i class="fa fa-user ml-2"></i
@@ -153,7 +149,7 @@
                                         </li>
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a href="#successes">
                                                 <i class="fa fa-trophy ml-2"></i
@@ -162,7 +158,7 @@
                                         </li>
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a
                                                 href="#Responsibilities"
@@ -176,114 +172,76 @@
                                         </li>
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a href="#education" class="">
                                                 <i
-                                                    class="fas fa-clipboard ml-2"
+                                                    class="fas fa-graduation-cap ml-2"
                                                 ></i
                                                 >تحصیلات</a
                                             >
                                         </li>
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a
                                                 href="#Educational-experiences"
                                                 class=""
                                             >
-                                                <i
-                                                    class="fas fa-clipboard ml-2"
-                                                ></i
+                                                <i class="fas fa-book ml-2"></i
                                                 >تجربیات آموزشی</a
                                             >
                                         </li>
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a
                                                 href="#Research-experiences"
                                                 class=""
                                             >
-                                                <i
-                                                    class="fas fa-clipboard ml-2"
-                                                ></i
+                                                <i class="fas fa-flask ml-2"></i
                                                 >تجربیات پژوهشی</a
                                             >
                                         </li>
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a
                                                 href="#Social-activities"
                                                 class=""
                                             >
-                                                <i
-                                                    class="fas fa-clipboard ml-2"
-                                                ></i
+                                                <i class="fas fa-users ml-2"></i
                                                 >فعالیت‌های اجتماعی</a
                                             >
                                         </li>
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a
                                                 href="#Membership-in-scientific-associations"
                                                 class=""
                                             >
-                                                <i
-                                                    class="fas fa-clipboard ml-2"
-                                                ></i
-                                                >عضویت در انجمن‌ها و انجمن‌های
-                                                علمی</a
-                                            >
+                                                <i class="fas fa-book-open"></i>
+                                                عضویت در انجمن‌ها و انجمن‌های
+                                                علمی
+                                            </a>
                                         </li>
                                         <li
                                             @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
+                                            class=""
                                         >
                                             <a
                                                 href="#Professional-experiences-and-advice"
                                                 class=""
                                             >
                                                 <i
-                                                    class="fas fa-clipboard ml-2"
+                                                    class="fas fa-briefcase ml-2"
                                                 ></i
                                                 >تجربیات حرفه‌ای و مشاوره</a
-                                            >
-                                        </li>
-                                        <li
-                                            @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
-                                        >
-                                            <a
-                                                href="#Membership-in-scientific-associations"
-                                                class=""
-                                            >
-                                                <i
-                                                    class="fas fa-clipboard ml-2"
-                                                ></i
-                                                >عضویت در انجمن‌ها <br />و
-                                                انجمن‌های علمی</a
-                                            >
-                                        </li>
-                                        <li
-                                            @click="inPageDetails=false"
-                                            class="flex items-center bg-transparent"
-                                        >
-                                            <a
-                                                href="#Membership-in-scientific-associations"
-                                                class=""
-                                            >
-                                                <i
-                                                    class="fas fa-clipboard ml-2"
-                                                ></i
-                                                >عضویت در انجمن‌ها <br />و
-                                                انجمن‌های علمی</a
                                             >
                                         </li>
                                     </ul>
@@ -295,10 +253,7 @@
             </div>
         </header>
         <!-- header sm md  -->
-        <header
-            id="header"
-            class="fixed z-[9997] w-full transform transition-transform duration-300 lg:hidden"
-        >
+        <header class="w-full lg:hidden">
             <div class="flex items-center">
                 <ul
                     class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-8 text-base shadow-2xl"
@@ -331,7 +286,7 @@
                         >
                             <!---->
                             <div
-                                class="z-40 flex w-72 flex-col rounded-lg bg-neutral-50 shadow-lg"
+                                class="z-40 flex w-78 flex-col rounded-lg bg-neutral-50 shadow-lg"
                             >
                                 <ul class="flex items-center">
                                     <li
@@ -359,124 +314,72 @@
                                 <ul
                                     class="mr-5 grid grid-cols-2 gap-5 text-xs text-neutral-700 last:col-span-2 last:mb-7"
                                 >
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a href="#aboutBagheri">
                                             <i class="fa fa-user ml-2"></i>سید
                                             علی باقری کیست؟</a
                                         >
                                     </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a href="#successes">
                                             <i class="fa fa-trophy ml-2"></i
                                             >افتخارات</a
                                         >
                                     </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a href="#Responsibilities" class="">
                                             <i class="fas fa-clipboard ml-2"></i
                                             >مسعولیت ها</a
                                         >
                                     </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a href="#education" class="">
-                                            <i class="fas fa-clipboard ml-2"></i
+                                            <i
+                                                class="fas fa-graduation-cap ml-2"
+                                            ></i
                                             >تحصیلات</a
                                         >
                                     </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a
                                             href="#Educational-experiences"
                                             class=""
                                         >
-                                            <i class="fas fa-clipboard ml-2"></i
+                                            <i class="fas fa-book ml-2"></i
                                             >تجربیات آموزشی</a
                                         >
                                     </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a
                                             href="#Research-experiences"
                                             class=""
                                         >
-                                            <i class="fas fa-clipboard ml-2"></i
+                                            <i class="fas fa-flask ml-2"></i
                                             >تجربیات پژوهشی</a
                                         >
                                     </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a href="#Social-activities" class="">
-                                            <i class="fas fa-clipboard ml-2"></i
+                                            <i class="fas fa-users ml-2"></i
                                             >فعالیت‌های اجتماعی</a
                                         >
                                     </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a
                                             href="#Membership-in-scientific-associations"
                                             class=""
                                         >
-                                            <i class="fas fa-clipboard ml-2"></i
-                                            >عضویت در انجمن‌ها و انجمن‌های
-                                            علمی</a
-                                        >
+                                            <i class="fas fa-book-open"></i>
+                                            عضویت در انجمن‌ها و انجمن‌های علمی
+                                        </a>
                                     </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
+                                    <li @click="inPageDetails=false" class="">
                                         <a
                                             href="#Professional-experiences-and-advice"
                                             class=""
                                         >
-                                            <i class="fas fa-clipboard ml-2"></i
+                                            <i class="fas fa-briefcase ml-2"></i
                                             >تجربیات حرفه‌ای و مشاوره</a
-                                        >
-                                    </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
-                                        <a
-                                            href="#Membership-in-scientific-associations"
-                                            class=""
-                                        >
-                                            <i class="fas fa-clipboard ml-2"></i
-                                            >عضویت در انجمن‌ها <br />و انجمن‌های
-                                            علمی</a
-                                        >
-                                    </li>
-                                    <li
-                                        @click="inPageDetails=false"
-                                        class="flex items-center bg-transparent"
-                                    >
-                                        <a
-                                            href="#Membership-in-scientific-associations"
-                                            class=""
-                                        >
-                                            <i class="fas fa-clipboard ml-2"></i
-                                            >عضویت در انجمن‌ها <br />و انجمن‌های
-                                            علمی</a
                                         >
                                     </li>
                                 </ul>
@@ -611,7 +514,7 @@
                     class="group relative ml-2 inline-flex items-center justify-center rounded-sm border-2 border-orange-500"
                 >
                     <span
-                        class="inline-flex animate-bounce items-center justify-center p-1 text-black transition-all"
+                        class="inline-flex animate-bounce items-center justify-center p-1 text-neutral-800 transition-all"
                     >
                         هنرجو
                     </span>
@@ -641,17 +544,402 @@
         </main>
         <!--enf of main-->
 
-        <section
-            class="grid w-screen -skew-y-1 grid-cols-4 bg-yellow-700/25 pb-10"
-        >
-            <div class="col-span-1 grid"></div>
-            <div
-                class="col-span-3 grid h-[3000px] skew-y-1 items-center justify-center"
-            >
-                <h1 id="aboutBagheri" class="mt-15 md:text-3xl">
-                    سید علی باقری کیست؟
-                </h1>
-            </div>
+        <section class="w-screen -skew-y-1 bg-yellow-700/25 pb-10">
+            <ul class="mx-7 flex skew-y-1 flex-col lg:mx-15">
+                <li class="">
+                    <a href="#aboutBagheri ">
+                        <h1
+                            id="aboutBagheri"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            سید علی باقری کیست؟
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+                <hr
+                    class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50"
+                />
+                <li>
+                    <a href="#successes">
+                        <h1
+                            id="successes"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            افتخارات
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+                <hr
+                    class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50"
+                />
+                <li>
+                    <a href="#Responsibilities">
+                        <h1
+                            id="Responsibilities"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            مسعولیت ها
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+                <hr
+                    class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50"
+                />
+                <li>
+                    <a href="#education">
+                        <h1
+                            id="education"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            تحصیلات
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+                <hr
+                    class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50"
+                />
+                <li>
+                    <a href="#Educational-experiences">
+                        <h1
+                            id="Educational-experiences"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            تجربیات آموزشی
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+                <hr
+                    class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50"
+                />
+                <li>
+                    <a href="#Research-experiences">
+                        <h1
+                            id="Research-experiences"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            تجربیات پژوهشی
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+                <hr
+                    class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50"
+                />
+                <li>
+                    <a href="#Social-activities">
+                        <h1
+                            id="Social-activities"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            فعالیت‌های اجتماعی
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+                <hr
+                    class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50"
+                />
+                <li>
+                    <a href="#Membership-in-scientific-associations">
+                        <h1
+                            id="Membership-in-scientific-associations"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            عضویت در انجمن‌ها و انجمن‌های علمی
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+                <hr
+                    class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50"
+                />
+                <li>
+                    <a href="#Professional-experiences-and-advice">
+                        <h1
+                            id="Professional-experiences-and-advice"
+                            class="group my-7 mt-15 cursor-pointer md:text-3xl"
+                        >
+                            <i
+                                class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"
+                            ></i>
+                            تجربیات حرفه‌ای و مشاوره
+                        </h1>
+                    </a>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                        بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                        و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                        متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                        برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                        طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+                        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                        طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                        پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                        اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </li>
+            </ul>
         </section>
         <!-- start footer -->
         <svg class="" viewBox="0 160 1440 150">

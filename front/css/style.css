@@ -178,34 +178,6 @@ html {
     background: #0000009a;
 }
 
-.tooltip {
-    position: relative;
-    display: flex;
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: max-content;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 6px;
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    left: -24px;
-    bottom: 27px;
-    z-index: 1;
-    transition-duration: 150ms;
-    opacity: 0;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 100;
-}
-
 [x-cloak] {
     display: none !important;
 }
@@ -214,15 +186,3 @@ html,
 body {
     overflow-x: hidden;
 }
-
-/* .tooltip .tooltiptext::after {
-    content: " ";
-    position: absolute;
-    top: 100%;
-    /* At the bottom of the tooltip */
-/* left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-  } */
