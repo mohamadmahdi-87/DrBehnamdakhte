@@ -45,3 +45,19 @@ $(document).ready(function () {
         }, 2000)
     })
 })
+
+$(document).ready(function () {
+    let prevScrollpos = window.pageYOffset
+
+    $(window).scroll(function () {
+        let currentScrollPos = window.pageYOffset
+
+        if (prevScrollpos > currentScrollPos) {
+            $('#header').css('transform', 'translateY(0)')
+        } else {
+            $('#header').css('transform', 'translateY(-100%)')
+        }
+
+        prevScrollpos = currentScrollPos
+    })
+})

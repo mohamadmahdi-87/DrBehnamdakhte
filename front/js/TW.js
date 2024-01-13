@@ -7,7 +7,6 @@ initTE({
     SmoothScroll,
     Ripple,
 })
-
 // Get the button
 const mybutton = document.getElementById('btn-back-to-top')
 

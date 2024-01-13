@@ -1,51 +1,53 @@
 <!doctype html>
-<html lang="fa">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>سایت مذهبی</title>
-        <!-- اضافه کردن Tailwind CSS -->
+        <link href="\front\dist\tailwind-o.css" rel="stylesheet" />
+        <link href="/front/css/style.css" rel="stylesheet" />
         <link
-            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
             rel="stylesheet"
+            href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
         />
+        <script src="/front/js/alpine.min.js" rel="stylesheet"></script>
+        <script
+            type="text/javascript"
+            src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
+        ></script>
+        <script type="text/javascript" src="\front\js\jquery.min.js"></script>
+        <script type="text/javascript" src="\front\js\TW.js"></script>
+        <script type="text/javascript" src="/front/js/script.js"></script>
+        <title>Scroll Header Animation</title>
     </head>
-
-    <body class="bg-white font-sans text-green-900">
-        <header class="bg-blue-600 py-4 text-center text-white">
-            <h1 class="text-2xl">سایت مذهبی</h1>
-        </header>
-
-        <main class="p-6">
-            <div
-                class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-            >
-                <div class="rounded bg-green-700 p-4 text-white">
-                    <h2 class="mb-2 text-xl font-semibold">باکس 1</h2>
-                    <p>محتوای باکس 1...</p>
-                </div>
-
-                <div class="rounded bg-purple-700 p-4 text-white">
-                    <h2 class="mb-2 text-xl font-semibold">باکس 2</h2>
-                    <p>محتوای باکس 2...</p>
-                </div>
-
-                <div class="rounded bg-yellow-700 p-4 text-green-900">
-                    <h2 class="mb-2 text-xl font-semibold">باکس 3</h2>
-                    <p>محتوای باکس 3...</p>
-                </div>
-
-                <div class="rounded bg-indigo-700 p-4 text-white">
-                    <h2 class="mb-2 text-xl font-semibold">باکس 4</h2>
-                    <p>محتوای باکس 4...</p>
-                </div>
-            </div>
-        </main>
-
-        <footer
-            class="fixed bottom-0 w-full bg-blue-600 py-2 text-center text-white"
+    <body>
+        <header
+            id="main-header"
+            class="fixed w-full transform bg-gray-800 p-4 text-white transition-transform duration-300"
         >
-            &copy; 2024 سایت مذهبی
-        </footer>
+            <h1>Your Header Content</h1>
+        </header>
+        <div id="main-content" class="mt-16 h-[2000px] p-4">
+            <!-- Your main content goes here -->
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                let prevScrollpos = window.pageYOffset
+
+                $(window).scroll(function () {
+                    let currentScrollPos = window.pageYOffset
+
+                    if (prevScrollpos > currentScrollPos) {
+                        // Scrolling up
+                        $('#main-header').css('transform', 'translateY(0)')
+                    } else {
+                        // Scrolling down
+                        $('#main-header').css('transform', 'translateY(-100%)')
+                    }
+
+                    prevScrollpos = currentScrollPos
+                })
+            })
+        </script>
     </body>
 </html>
