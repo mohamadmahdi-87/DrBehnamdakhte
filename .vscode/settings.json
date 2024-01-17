@@ -1,4 +1,14 @@
 {
     "liveServer.settings.multiRootWorkspaceName": "index",
-    "cSpell.words": ["ayandehroshan", "datepicker", "Nassim", "Vazir", "Yekan"]
+    "cSpell.words": [
+        "ayandehroshan",
+        "datepicker",
+        "mohamadmahdi",
+        "Nassim",
+        "tasmime",
+        "taze",
+        "Vazir",
+        "Yekan"
+    ],
+    "liveServer.settings.port": 5501
 }

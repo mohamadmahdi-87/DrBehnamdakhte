@@ -15,11 +15,23 @@
             type="text/javascript"
             src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
         ></script>
+
         <script type="text/javascript" src="\front\js\jquery.min.js"></script>
         <script type="text/javascript" src="\front\js\TW.js"></script>
         <script type="text/javascript" src="/front/js/script.js"></script>
+        <link
+            rel="stylesheet"
+            href="/node_modules/@splidejs/splide/dist/css/splide.min.css"
+        />
+        <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+        <script src="/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                new Splide(".splide").mount(window.splide.Extensions)
+            })
+        </script>
 
-        <title>AyandeRoshan</title>
+        <title>tasmime taze</title>
     </head>
 
     <body
@@ -49,27 +61,45 @@
                     <div>
                         <ul
                             role="list"
-                            class="flex items-center justify-between gap-5 text-white/90"
+                            class="flex items-center justify-between gap-5 text-base text-white/90"
                         >
                             <li
-                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-500"
+                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300"
                             >
                                 <a href="/front/index.html">
-                                    <i class="fa fa-home ml-2"></i>خانه
+                                    <i class="fa fa-home ml-2"></i>صفحه اصلی
                                 </a>
                             </li>
-
                             <li
-                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-500"
+                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300"
                             >
-                                <a href="#aboutUs" class="">
-                                    <i class="fa fa-info-circle ml-2"></i>
-                                    درباره ما
+                                <a href="/front/news.html">
+                                    <i class="far fa-newspaper ml-2"></i>اخبار
                                 </a>
                             </li>
-
                             <li
-                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-500"
+                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300"
+                            >
+                                <a href="/front/articles.html">
+                                    <i class="far fa-file-alt ml-2"></i>مقالات
+                                </a>
+                            </li>
+                            <li
+                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300"
+                            >
+                                <a href="/front/books.html">
+                                    <i class="fa fa-feather ml-2"></i>تالیفات
+                                </a>
+                            </li>
+                            <li
+                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300"
+                            >
+                                <a href="/front/speechs.html">
+                                    <i class="fa fa-podcast ml-2"></i>سخنرانی ها
+                                </a>
+                            </li>
+                            <li
+                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300"
                             >
                                 <a href="#contactUs" class="">
                                     <i class="fa fa-phone ml-2"></i> تماس با ما
@@ -984,9 +1014,10 @@
                                     <i class="fa fa-phone"></i>
                                     شماره تلفن:
                                     <span
+                                        dir="ltr"
                                         id="number"
                                         class="duration-500 ease-out hover:text-sky-500"
-                                        >09123456789</span
+                                        >0911 223 9640</span
                                     >
                                 </span>
                                 <span>
@@ -1009,7 +1040,7 @@
                 >
                     <h1>درباره آینده روشن</h1>
                     <p class="mt-4 w-full md:w-2/3">
-                        ''AyandeRoshan desighed by
+                        ''tasmime taze designed by
                         <a
                             target="_blank"
                             class="animate-pulse duration-500 ease-out hover:animate-spin hover:text-sky-500"
