@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'Vazir';
+    font-family: "Vazir";
     src:
-        url('/fonts/Vazir/Vazir.woff') format('woff'),
-        url('/fonts/Vazir/Vazir.woff2') format('woff2');
+        url("/fonts/Vazir/Vazir.woff") format("woff"),
+        url("/fonts/Vazir/Vazir.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: 'Yekan';
+    font-family: "Yekan";
     src:
-        url('/fonts/Nassim/BBCNassim.eot') format('truetype'),
-        url('/fonts/Nassim/BBCNassim.ttf') format('woff'),
-        url('/fonts/Nassim/BBCNassim.woff') format('woff2');
+        url("/fonts/Nassim/BBCNassim.eot") format("truetype"),
+        url("/fonts/Nassim/BBCNassim.ttf") format("woff"),
+        url("/fonts/Nassim/BBCNassim.woff") format("woff2");
 }
 
 @keyframes bounce {
@@ -69,7 +69,7 @@
 }
 
 body {
-    font-family: 'Vazir';
+    font-family: "Vazir";
 }
 
 body::-webkit-scrollbar {
@@ -146,11 +146,11 @@ html {
 }
 
 .vazir {
-    font-family: 'Vazir';
+    font-family: "Vazir";
 }
 
 .yekan {
-    font-family: 'Yekan';
+    font-family: "Yekan";
 }
 
 .clip1 {
