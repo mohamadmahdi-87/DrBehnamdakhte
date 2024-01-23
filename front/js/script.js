@@ -92,4 +92,24 @@ $(document).ready(function () {
             $("#faAngleDown1").removeClass("rotate-180");
         });
     });
+    $(document).ready(function () {
+        $("#newsDropdownSm").addClass("hidden");
+
+        $("#faAngleDownSm").click(function () {
+            $(this).toggleClass("rotate-180");
+            $("#newsDropdownSm").slideToggle("fast");
+        });
+    });
+});
+
+$(document).ready(function () {
+    setTimeout(function () {
+        $("#myGallery1").removeClass("opacity-0").addClass("opacity-100", "");
+    }, 300);
+    setTimeout(function () {
+        $("#myGallery2").removeClass("opacity-0").addClass("opacity-100", "");
+    }, 450);
+    setTimeout(function () {
+        $("#myGallery3").removeClass("opacity-0").addClass("opacity-100", "");
+    }, 600);
 });

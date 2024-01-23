@@ -5,6 +5,7 @@ module.exports = {
         fontFamily: {
             Vazir: ["Vazir"],
             Yekan: ["Yekan"],
+            nastaliq: ["nastaliq"],
         },
         extend: {
             spacing: {

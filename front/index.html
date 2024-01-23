@@ -86,20 +86,20 @@
                 <span class="absolute -left-35 top-0 h-16 w-95 -skew-x-[70deg] bg-blue-700/50"> </span>
                 <div class="flex items-center justify-between">
                     <ul class="flex items-center justify-between gap-3 text-white/90">
-                        <li x-data="{ inPageDetails : false }" class="relative">
-                            <div @click="inPageDetails = true" class="ml-4 text-lg">
-                                <i class="fa fa-bars pt-1"></i>
+                        <li x-data="{ sideNavLg : false }" class="relative">
+                            <div @click="sideNavLg = true" class="ml-4 text-lg">
+                                <i class="fa fa-bars px-2 pt-1"></i>
                             </div>
-                            <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="inPageDetails" @click="inPageDetails=false"></div>
+                            <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="sideNavLg" @click="sideNavLg=false"></div>
                             <div
-                                @click.away="inPageDetails=false"
-                                @keydown.escape="inPageDetails = false"
+                                @click.away="sideNavLg=false"
+                                @keydown.escape="sideNavLg = false"
                                 x-transition:enter="transition-transform transition-opacity ease-out duration-300"
                                 x-transition:enter-start="opacity-0 transform translate-x-20"
                                 x-transition:enter-end="opacity-100 transform -translate-y-0"
                                 x-transition:leave="transition  ease-in duration-300"
                                 x-transition:leave-end="opacity-0 transform translate-x-20"
-                                x-show="inPageDetails"
+                                x-show="sideNavLg"
                                 class="fixed right-0 top-0 z-[9999] rounded-lg"
                             >
                                 <!---->
@@ -138,9 +138,6 @@
                                         <li>
                                             <a class="w-full" href="#Social-activities"> <i class="fas fa-users ml-2"></i> تماس با ما </a>
                                         </li>
-                                        <li>
-                                            <a class="w-full" href="#Social-activities"> <i class="fas fa-users ml-2"></i> تماس با ما </a>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -151,120 +148,73 @@
         </header>
         <!-- header sm md  -->
         <header class="w-full lg:hidden">
-            <div class="flex items-center">
+            <div class="flex w-screen items-center">
                 <ul class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-8 text-base shadow-2xl">
-                    <li x-data="{ inPageDetails : false }" class="relative">
-                        <div @click="inPageDetails = true" class="h-10 w-10 rounded-full bg-green-100/90">
-                            <img class="h-full w-full rounded-full object-cover" src="/img/seyedalibagheri.png" alt="" />
-                        </div>
-                        <div class="fixed left-0 top-0 z-[9998] h-screen w-screen bg-black/50" x-show="inPageDetails" @click="inPageDetails=false"></div>
-                        <div
-                            @click.outside="inPageDetails=false"
-                            x-transition:enter="transition-transform transition-opacity ease-out duration-300"
-                            x-transition:enter-start="opacity-0 transform -translate-x-20"
-                            x-transition:enter-end="opacity-100 transform translate-y-0"
-                            x-transition:leave="transition  ease-in duration-300"
-                            x-transition:leave-end="opacity-0 transform -translate-x-20"
-                            x-show="inPageDetails"
-                            class="absolute -left-2 top-20 z-[9999] rounded-lg bg-green-100"
-                        >
-                            <!---->
-                            <div class="z-40 flex w-78 flex-col rounded-lg bg-neutral-50 shadow-lg">
-                                <ul class="flex items-center">
-                                    <li class="mx-5 my-3 h-14 w-14 overflow-hidden rounded-full bg-green-100/90">
-                                        <span class="">
-                                            <img class="h-full w-full rounded-full" src="/img/seyedalibagheri.png" alt="bagheri" />
-                                        </span>
-                                    </li>
-                                    <li class="flex justify-start">
-                                        <span class="h-max w-max bg-transparent text-neutral-700"> سید علی باقری </span>
-                                    </li>
-                                </ul>
-                                <hr class="my-5 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
-                                <ul class="mr-5 grid grid-cols-2 gap-5 text-xs text-neutral-700 last:col-span-2 last:mb-7">
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#aboutBagheri"> <i class="fa fa-user ml-2"></i>سید علی باقری کیست؟</a>
-                                    </li>
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#successes"> <i class="fa fa-trophy ml-2"></i>افتخارات</a>
-                                    </li>
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#Responsibilities" class=""> <i class="fas fa-clipboard ml-2"></i>مسعولیت ها</a>
-                                    </li>
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#education" class=""> <i class="fas fa-graduation-cap ml-2"></i>تحصیلات</a>
-                                    </li>
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#Educational-experiences" class=""> <i class="fas fa-book ml-2"></i>تجربیات آموزشی</a>
-                                    </li>
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#Research-experiences" class=""> <i class="fas fa-flask ml-2"></i>تجربیات پژوهشی</a>
-                                    </li>
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#Social-activities" class=""> <i class="fas fa-users ml-2"></i>فعالیت‌های اجتماعی</a>
-                                    </li>
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#Membership-in-scientific-associations" class="">
-                                            <i class="fas fa-book-open"></i>
-                                            عضویت در انجمن‌ها و انجمن‌های علمی
-                                        </a>
-                                    </li>
-                                    <li @click="inPageDetails=false" class="">
-                                        <a href="#Professional-experiences-and-advice" class=""> <i class="fas fa-briefcase ml-2"></i>تجربیات حرفه‌ای و مشاوره</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <li class="">
+                        <img class="w-15" src="/img/flower.png" alt="flower" />
                     </li>
-
-                    <li class="flex items-center self-center">
+                    <li class="flex">
                         <a href="" class="w-35">
                             <img src="/img/seyedalibagheri-lightGreen.png" alt="seyedalibagheri" />
                         </a>
                     </li>
-                    <li x-data="{ navbar: false } ">
-                        <button @keydown.escape="navbar = false" class="flex items-center text-lg text-white" @click="navbar = true">&#9776;</button>
-                        <!-- Navbar -->
-                        <div class="fixed left-0 top-0 z-[9000] h-screen w-screen bg-black/50" x-show="navbar" @click="navbar=false"></div>
+                    <li x-data="{ sideNavSm : false }" class="relative">
+                        <div @click="sideNavSm = true" class="text-lg">
+                            <i class="fa fa-bars px-2 pt-1 text-neutral-200"></i>
+                        </div>
+                        <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="sideNavSm" @click="sideNavSm=false"></div>
                         <div
-                            @click.outside="navbar=false"
+                            @click.away="sideNavSm=false"
+                            @keydown.escape="sideNavSm = false"
                             x-transition:enter="transition-transform transition-opacity ease-out duration-300"
                             x-transition:enter-start="opacity-0 transform translate-x-20"
-                            x-transition:enter-end="opacity-100 transform translate-y-0"
-                            x-transition:leave="transition ease-in duration-300"
+                            x-transition:enter-end="opacity-100 transform -translate-y-0"
+                            x-transition:leave="transition  ease-in duration-300"
                             x-transition:leave-end="opacity-0 transform translate-x-20"
-                            class="fixed right-0 top-0 z-[9999] h-full w-2/3 bg-zinc-900 text-gray-50"
-                            x-show="navbar"
-                            x-cloak
+                            x-show="sideNavSm"
+                            class="fixed right-0 top-0 z-[9999] rounded-lg"
                         >
-                            <div @click="navbar=false" class="relative z-[9999]">
-                                <i class="fa fa-times-circle absolute left-4 top-4 z-[9999] text-orange-300"></i>
+                            <!---->
+
+                            <div class="z-40 flex h-screen w-50 flex-col bg-blue-600">
+                                <ul class="flex flex-col justify-stretch gap-5 px-9 text-base text-neutral-50 first:mt-17 last:mb-7">
+                                    <li>
+                                        <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/articles.html"> <i class="fas fa-clipboard ml-2"></i>مقالات</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/books.html"> <i class="fas fa-feather ml-2"></i>تالیفات</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/gallery.html"> <i class="fas fa-images ml-2"></i>گالری</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/speechs.html"> <i class="fas fa-book ml-2"></i>سخنرانی ها</a>
+                                    </li>
+                                    <li class="relative flex flex-col" id="newsSm">
+                                        <span class="flex items-center gap-3">
+                                            <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار </a>
+                                            <i id="faAngleDownSm" class="fa fa-angle-down text-xs transition-all"></i>
+                                        </span>
+
+                                        <span id="newsDropdownSm" class="static right-0 w-full pr-7 pt-4 text-neutral-200">
+                                            <ul class="flex flex-col gap-2 child:list-disc">
+                                                <li class="hover:text-emerald-300">اخبار استانی</li>
+                                                <li class="hover:text-emerald-300">اخبار شهرستانی</li>
+                                                <li class="hover:text-emerald-300">اخبار منطقه ای</li>
+                                            </ul>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="#Social-activities"> <i class="fas fa-users ml-2"></i> تماس با ما </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="z-[9999] py-10">
-                                <p
-                                    class="z-[9999] mx-auto flex items-center justify-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-lg font-black text-transparent"
-                                >
-                                    <a href="" class="z-[9999] w-45">
-                                        <img src="/img/seyedalibagheri-lightGreen.png" alt="seyedalibagheri" />
-                                    </a>
-                                </p>
-                            </div>
-                            <ul class="text-white-90 z-[9999] flex flex-col gap-3 pr-6">
-                                <div class="text-white-90 z-[9999] flex flex-col gap-3">
-                                    <ul class="flex w-max flex-col gap-3">
-                                        <li class="flex gap-1 py-1 transition-all hover:text-amber-500"></li>
-                                        <li class="animate-pulse cursor-pointer rounded-md border border-solid border-amber-500 px-2 py-1 transition-all hover:text-amber-500">
-                                            <a href="#aboutBagheri"> <i class="fa fa-user ml-2"></i>سید علی باقری کیست؟</a>
-                                        </li>
-                                        <li class="flex cursor-pointer items-center gap-1 py-1 transition-all hover:text-amber-500">
-                                            <a href="#successes"> <i class="fa fa-trophy ml-2"></i>افتخارات</a>
-                                        </li>
-                                        <li class="flex cursor-pointer items-center gap-1 py-1 transition-all hover:text-amber-500">
-                                            <a href="#Responsibilities" class=""> <i class="fas fa-clipboard ml-2"></i>مسعولیت ها</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -273,222 +223,38 @@
         <!--enf of head -->
         <!--enf of head -->
         <!--enf of head -->
-        <main class="mx-auto flex h-[80vh] flex-col items-center md:h-[100vh] md:flex-row-reverse md:justify-evenly">
+        <main class="mt-8 flex flex-col items-center md:mx-auto md:h-[100vh] md:flex-row-reverse md:justify-evenly">
             <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
-            <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
-                <div class="-m-1 flex flex-wrap md:-m-2">
-                    <div class="flex w-1/2 flex-wrap">
-                        <div class="w-1/2 p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
-                        </div>
-                        <div class="w-1/2 p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
-                        </div>
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-                        </div>
+            <div class="flex basis-1/2 justify-center">
+                <div class="m-10 flex flex-wrap md:m-0 md:w-100">
+                    <div class="basis-1/2 p-1 opacity-0 transition-opacity duration-700 md:p-2" id="myGallery2">
+                        <img alt="gallery" class="block h-30 w-50 rounded-lg object-cover object-center shadow-xl" src="/img/next-to-flag.jpg" />
                     </div>
-                    <div class="flex w-1/2 flex-wrap">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
-                        </div>
-                        <div class="w-1/2 p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
-                        </div>
-                        <div class="w-1/2 p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
-                        </div>
+                    <div class="basis-1/2 p-1 opacity-0 transition-opacity duration-700 md:p-2" id="myGallery1">
+                        <img alt="gallery" class="block h-30 w-50 rounded-lg object-cover object-center shadow-xl" src="/img/inPeple.jpg" />
+                    </div>
+
+                    <div class="basis-full p-1 opacity-0 transition-opacity duration-700 md:p-2" id="myGallery3">
+                        <img alt="gallery" class="block h-50 w-full rounded-lg object-cover object-center shadow-xl" src="/img/seyedGreenBack.jpg" />
                     </div>
                 </div>
             </div>
-            <h1 class="my-10 text-center text-xl font-bold max-sm:mx-16 md:text-3xl">
-                <span class="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent"> سایت طراحی شده توسط </span>
-                <span class="group relative ml-2 inline-flex items-center justify-center rounded-sm border-2 border-orange-500">
-                    <span class="inline-flex animate-bounce items-center justify-center p-1 text-neutral-800 transition-all"> هنرجو </span>
-                    <span class="absolute -left-1 -top-1 z-10 rounded-full bg-orange-500 p-1 duration-700 ease-in-out group-hover:md:translate-x-[5.10rem]"> </span>
-                    <span class="absolute -right-1 -top-1 z-10 rounded-full bg-orange-500 p-1 duration-700 ease-in-out group-hover:md:translate-y-[45px]"> </span>
-                    <span class="absolute -bottom-1 -right-1 z-10 rounded-full bg-orange-500 p-1 duration-700 ease-in-out group-hover:md:-translate-x-[5.10rem]"> </span>
-                    <span class="absolute -bottom-1 -left-1 z-10 rounded-full bg-orange-500 p-1 duration-700 ease-in-out group-hover:md:-translate-y-[45px]"> </span>
-                </span>
-                <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> های استاد باقری </span>
-            </h1>
+            <div class="w-full basis-1/2 md:h-104">
+                <div class="my-10 text-center font-bold">
+                    <h1 class="inline-flex animate-bounce items-center justify-center font-nastaliq text-5xl text-primary-900 drop-shadow-[1px_2px_2.5px_rgba(0,0,0,0.6)] md:text-5xl">
+                        سید علی باقری
+                    </h1>
+                </div>
+                <div class="mx-7 mb-20 mt-20 flex flex-col justify-end gap-6 text-xl md:mx-20 [&>span>i]:mt-1 [&>span]:flex [&>span]:gap-2 [&>span]:text-gray-600">
+                    <span class=""> <i class="fas fa-vote-yea text-rose-600"></i> کاندیدای ششمین دوره شوراي اسلامی قائمشهر </span>
+                    <span class=""> <i class="fas fa-landmark text-green-600"></i>مدیریت دولتی با گرایش تصمیم‌گیری و خط‌مشی‌گذاری عمومی</span>
+                    <span class=""> <i class="fas fa-chart-line text-blue-600"></i> مشاور مدیریت و برنامه‌ریزی </span>
+                    <span class=""> <i class="fas fa-chart-pie text-orange-400"></i> مشاور مالی و بودجه </span>
+                </div>
+            </div>
         </main>
         <!--enf of main-->
 
-        <section class="w-screen -skew-y-1 bg-yellow-700/25 pb-10">
-            <ul class="mx-7 flex skew-y-1 flex-col lg:mx-15">
-                <li class="">
-                    <a href="#aboutBagheri ">
-                        <h1 id="aboutBagheri" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            سید علی باقری کیست؟
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-                <hr class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50" />
-                <li>
-                    <a href="#successes">
-                        <h1 id="successes" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            افتخارات
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-                <hr class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50" />
-                <li>
-                    <a href="#Responsibilities">
-                        <h1 id="Responsibilities" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            مسعولیت ها
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-                <hr class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50" />
-                <li>
-                    <a href="#education">
-                        <h1 id="education" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            تحصیلات
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-                <hr class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50" />
-                <li>
-                    <a href="#Educational-experiences">
-                        <h1 id="Educational-experiences" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            تجربیات آموزشی
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-                <hr class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50" />
-                <li>
-                    <a href="#Research-experiences">
-                        <h1 id="Research-experiences" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            تجربیات پژوهشی
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-                <hr class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50" />
-                <li>
-                    <a href="#Social-activities">
-                        <h1 id="Social-activities" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            فعالیت‌های اجتماعی
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-                <hr class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50" />
-                <li>
-                    <a href="#Membership-in-scientific-associations">
-                        <h1 id="Membership-in-scientific-associations" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            عضویت در انجمن‌ها و انجمن‌های علمی
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-                <hr class="my-12 h-0.5 border-t-0 bg-neutral-700/50 opacity-100 dark:opacity-50" />
-                <li>
-                    <a href="#Professional-experiences-and-advice">
-                        <h1 id="Professional-experiences-and-advice" class="group my-7 mt-15 cursor-pointer md:text-3xl">
-                            <i class="fa fa-link text-base text-neutral-700/75 transition-all group-hover:text-neutral-800/100"></i>
-                            تجربیات حرفه‌ای و مشاوره
-                        </h1>
-                    </a>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-                        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
-                        با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در
-                        ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم
-                        ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                        تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </li>
-            </ul>
-        </section>
         <!-- start footer -->
         <svg class="" viewBox="0 160 1440 150">
             <path
@@ -497,51 +263,134 @@
             ></path>
         </svg>
         <footer class="z-10 w-full">
-            <section class="flex h-62 w-full flex-col bg-blue-900 px-8 text-white/80 md:flex-row">
-                <div class="mt-4 flex md:mt-16 md:basis-1/2">
-                    <div id="contactUs" class="flex flex-col">
-                        راه های ارتباطی :
-                        <!--  -->
-                        <div class="mt-4 flex flex-col gap-3">
-                            <div class="flex flex-row gap-2 rounded-full text-lg max-md:p-1 md:px-2 md:py-1">
-                                <a href="https://t.me/Dr_Bagheri_Ali">
-                                    <i class="text-telegram fab fa-telegram-plane duration-300 ease-out"></i>
-                                </a>
-                                <a href="https://www.instagram.com/tasmime_taze/">
-                                    <i class="text-instagram fab fa-instagram duration-300 ease-out"></i>
-                                </a>
-
-                                <a href="">
-                                    <i class="text-whatsapp fab fa-whatsapp duration-300 ease-out"></i>
-                                </a>
+            <section class="flex flex-col bg-blue-900 px-8 text-white/80">
+                <footer class="">
+                    <div class="mx-auto w-full max-w-screen-xl">
+                        <div class="grid grid-cols-2 gap-8 px-4 py-6 md:grid-cols-4 lg:py-8">
+                            <div>
+                                <i class="fas fa-envelope inline"></i>
+                                <h2 class="mr-1 inline text-xl">راه های ارتباطی</h2>
+                                <ul class="mt-6">
+                                    <li class="mb-4">
+                                        <div class="flex flex-row items-center gap-2 rounded-full text-lg max-md:p-1 md:px-2 md:py-1">
+                                            <a href="https://t.me/Dr_Bagheri_Ali">
+                                                <i class="text-telegram fab fa-telegram-plane duration-300 ease-out"></i>
+                                            </a>
+                                            <a href="https://www.instagram.com/tasmime_taze/">
+                                                <i class="text-instagram fab fa-instagram duration-300 ease-out"></i>
+                                            </a>
+                                            <a href="">
+                                                <i class="text-whatsapp fab fa-whatsapp duration-300 ease-out"></i>
+                                            </a>
+                                            <a class="mb-1.5 h-4 w-4" href="">
+                                                <svg class="fill-current duration-300 ease-out hover:text-[#FF8100]" viewBox="0 0 3584.55 3673.6">
+                                                    <path
+                                                        d="M1071.43,2.75H2607.66C3171,2.75,3631.82,462.91,3631.82,1026.2v493.93c-505,227-1014.43,1348.12-1756.93,1104.51-61.16,43.46-202.11,222.55-212,358.43-257.11-34.24-553.52-328.88-517.95-646.62C717,2026.91,1070.39,1455.5,1409.74,1225.51c727.32-492.94,1737.05-69,1175.39,283.45-341.52,214.31-1071.84,355.88-995.91-170.24-200.34,57.78-328.58,431.34-87.37,626-223.45,219.53-180.49,623.07,58.36,755.57,241.56-625.87,1082.31-544.08,1422-1291.2,255.57-562-123.34-1202.37-880.91-1104C1529.56,399.34,993.64,881.63,725.62,1453.64,453.68,2034,494.15,2811.15,1052.55,3202.82c657.15,460.92,1356.78,34.13,1780.52-523.68,249.77-328.78,468-693,798.75-903.37v875.72c0,563.28-460.88,1024.86-1024.16,1024.86H1071.43c-563.29,0-1024.16-460.87-1024.16-1024.16V1026.9C47.27,463.61,508.14,2.74,1071.43,2.74Z"
+                                                    />
+                                                </svg>
+                                            </a>
+                                            <a class="mb-1.5 h-4 w-4" href="">
+                                                <svg class="fill-current duration-300 ease-out hover:text-[#00AB80]" viewBox="0 0 1000 999.63">
+                                                    <g>
+                                                        <path
+                                                            d="M1009.65,466.44c-1.3-21.39-5-42.79-9.7-63.78C987.56,346,964.66,291.8,933.47,242.91,863.09,132.24,747.53,51,619,24a411.57,411.57,0,0,0-57.28-9.1,443.14,443.14,0,0,0-76.38-1.7,388.45,388.45,0,0,0-61.88,7.2c-18.7,2.6-36.89,7.8-55,12.69-16.9,5.3-33.69,11.3-50.09,18.2a469.62,469.62,0,0,0-45.78,22.09,437.61,437.61,0,0,0-42.69,26.29,100.06,100.06,0,0,1-10.6,6.8c-34.19-26-68.78-51.38-104.77-74.77-9.89-6.1-19.49-13-30.59-16.7-18.19-6.4-39.48-1.5-53.78,11.5C16.55,38.57,10.66,57.37,12.26,75.26c.1,23.79-.1,47.69.2,71.48-.3,24-.1,48.18-.2,72.18s-.1,48,.1,72q-.3,42,0,83.87-.3,40.78.1,81.57c.2,34-1.6,68.18,2.19,102.07,2.7,34.89,9.9,69.48,20.3,102.77,47.38,154.85,175.24,283,330.8,328.3l.1.6c32.39,9.6,65.68,16.7,99.27,19.29,37.28,3.6,75.07,3.5,112.16-2.19,19.9-1.5,39.39-6.4,58.88-10.7A566.24,566.24,0,0,0,702,974.59c20.1-8.6,40-17.9,58.89-29.1a455,455,0,0,0,48.38-31.59,496.83,496.83,0,0,0,51.28-43.48,486.75,486.75,0,0,0,35.19-38A500,500,0,0,0,926.27,792c8.6-12.79,16.6-26.09,24.3-39.49,7.89-15.19,15.49-30.39,22.29-46.08,7.4-18.8,14.7-37.69,19.89-57.18,4.4-16,9.2-32,10.8-48.49,4.2-17.39,6.1-35.69,6.8-53.48A412.52,412.52,0,0,0,1009.65,466.44ZM826.51,400.86c-6.1,16.2-16.8,30.09-29.5,41.69-11.09,11-22.09,22.09-33.19,33.19-11.79,11.79-23.59,23.49-35.28,35.39-11.3,11.19-22.6,22.39-33.89,33.79-12.3,12.29-24.7,24.59-36.89,36.89-14,14.09-28.09,28-42.09,42.08-13.2,13.3-26.49,26.49-39.79,39.79s-26.79,26.69-40.09,40.09c-12.29,11.79-23.49,24.89-37.38,35a105.49,105.49,0,0,1-57.89,16c-23.59-1.5-46.68-10.79-63.68-27.39q-78.42-78.42-156.95-157c-12.79-12.7-21.39-29.09-26-46.39-4.8-23.89-2-49.48,10.3-70.77,9.39-16.5,23.79-29.6,40.18-39a107.88,107.88,0,0,1,57.89-9.7c21.39,3.2,41.88,13,56.88,28.79,28.39,28.39,56.68,56.88,85.27,85.18,8.6-8.2,16.9-16.8,25.1-25.3,12-11.49,23.79-23.29,35.28-35.39,11.4-10.59,22.3-21.79,33.09-33.09,7.7-6.89,14.7-14.49,22.1-21.79,12-11.7,23.69-23.59,35.39-35.49,11.29-10.79,22.19-22,33.09-33,11.79-11.49,23.29-23.29,35-34.89a106.64,106.64,0,0,1,42.18-26.39A107.77,107.77,0,0,1,768,274.5c25.7,9.8,46.29,30,57.59,54.88C833.9,352.28,834.9,377.87,826.51,400.86Z"
+                                                            transform="translate(-12 -12.19)"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="mb-4">
+                                        <span>
+                                            <span dir="ltr" id="number" class="duration-300 ease-out hover:text-emerald-300">0911 223 9640</span>
+                                        </span>
+                                    </li>
+                                    <li class="mb-4">
+                                        <span>
+                                            <span id="email" class="relative duration-300 ease-out hover:text-emerald-300">bagheriali2020@gmail.com</span>
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
-                            <contact class="flex flex-col text-sm lg:text-base">
-                                <span>
-                                    <i class="fa fa-phone"></i>
-                                    شماره تلفن:
-                                    <span dir="ltr" id="number" class="duration-500 ease-out hover:text-sky-500">0911 223 9640</span>
-                                </span>
-                                <span>
-                                    <i class="fa fa-at"></i>
-                                    ایمیل:
-                                    <span id="email" class="relative duration-500 ease-out hover:text-sky-500">AyandeRoshan@gmail.com</span>
-                                </span>
-                            </contact>
+                            <div>
+                                <i class="fas fa-newspaper inline"></i>
+                                <h2 class="mr-1 inline text-xl">اخبار</h2>
+                                <ul class="mt-6 text-neutral-300">
+                                    <li class="mb-4">
+                                        <a href="#" class="duration-300 ease-out hover:text-emerald-300">اخبار استانی </a>
+                                    </li>
+                                    <li class="mb-4">
+                                        <a href="#" class="duration-300 ease-out hover:text-emerald-300">اخبار شهرستانی</a>
+                                    </li>
+                                    <li class="mb-4">
+                                        <a href="#" class="duration-300 ease-out hover:text-emerald-300">اخبار منطقه ای</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a class="mb-6 flex items-center gap-2" href="front/books.html">
+                                    <i class="fas fa-feather"></i>
+                                    <h2 class="text-xl">تالیفات</h2>
+                                </a>
+                                <ul class="text-neutral-300">
+                                    <li class="mb-4">
+                                        <a
+                                            href="https://irangn.ir/book_view.php?id=1824&title=%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA%20%D9%BE%D8%B1%D9%88%DA%98%D9%87%20%D8%A8%D8%A7%20%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%A7%D8%B1%D8%AF%20%D8%AC%D9%87%D8%A7%D9%86%DB%8C%20PMBOK"
+                                            class="duration-300 ease-out hover:text-emerald-300"
+                                            >مدیریت پروژه با استاندارد جهانی
+                                        </a>
+                                    </li>
+                                    <li class="mb-4">
+                                        <a
+                                            href="https://irangn.ir/book_view.php?id=1825&title=%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA%20%D8%A8%D8%A7%D8%B2%D8%B1%D8%B3%DB%8C%20%D8%A8%D8%B1%20%D9%85%D8%A8%D9%86%D8%A7%DB%8C%20%D8%B1%DB%8C%D8%B3%DA%A9%20(RBI(Risk%20Base%20Inespected"
+                                            class="duration-300 ease-out hover:text-emerald-300"
+                                            >مدیریت بازرسی بر مبنای ریسک
+                                        </a>
+                                    </li>
+                                    <li class="mb-4">
+                                        <a
+                                            href="https://irangn.ir/book_view.php?id=1826&title=%DA%A9%D8%A7%D8%B1%20%D8%A7%D8%B2%20%D8%B1%D8%A7%D9%87%20%D8%AF%D9%88%D8%B1%20Teleworking(%D8%A7%D9%85%DA%A9%D8%A7%D9%86%20%D8%B3%D9%86%D8%AC%DB%8C%D8%8C%D9%BE%DB%8C%D8%A7%D8%AF%D9%87%20%D8%B3%D8%A7%D8%B2%DB%8C%D8%8C%DA%86%D8%A7%D9%84%D8%B4%20%D9%87%D8%A7%20%D9%88%20%D8%B1%D8%A7%D9%87%DA%A9%D8%A7%D8%B1%D9%87%D8%A7)"
+                                            class="duration-300 ease-out hover:text-emerald-300"
+                                            >کار از راه دور
+                                        </a>
+                                    </li>
+                                    <li class="mb-4">
+                                        <a
+                                            href="https://irangn.ir/book_view.php?id=1827&title=%DA%A9%DB%8C%D9%81%DB%8C%D8%AA%20%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%DA%A9%D8%A7%D8%B1%DB%8C%20Quality%20of%20Work%20Life%20%D8%A8%D8%A7%20%D9%85%D8%AF%D9%84%20%D8%A8%D9%88%D9%85%DB%8C"
+                                            class="duration-300 ease-out hover:text-emerald-300"
+                                            >کیفیت زندگی کاری با مدل بومی</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <i class="far fa-file-alt inline"></i>
+                                <h2 class="mr-1 inline text-xl">مقالات</h2>
+                                <ul class="mt-6 flex flex-col gap-4 text-neutral-300">
+                                    <li class="">
+                                        <a href="https://irangn.ir/article_view.php?rahgiri=6146825079692174" class="duration-300 ease-out hover:text-emerald-300"
+                                            >تأثیر جلب اعتماد مشتریان توسط سرمایه انسانی بر میزان رضایت</a
+                                        >
+                                    </li>
+                                    <li class="">
+                                        <a href="https://irangn.ir/article_view.php?rahgiri=6146807362444821" class="duration-300 ease-out hover:text-emerald-300"
+                                            >ارزیابی عملکرد مدیریت پروژه فاز ۱۳ پارس جنوبی با استاندارد جهانی PMBOK</a
+                                        >
+                                    </li>
+                                    <li class="">
+                                        <a href="https://irangn.ir/article_view.php?rahgiri=6146824460425599" class="duration-300 ease-out hover:text-emerald-300"
+                                            >توسعه بستر و زیرساخت "فاوا" جهت ارائه خدمات الکترونیکی به ذی¬نفعان</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="aboutUs" data-te-smooth-scroll-init class="mt-4 flex flex-col md:mt-16 md:basis-1/2">
-                    <h1>درباره آینده روشن</h1>
-                    <p class="mt-4 w-full md:w-2/3">
-                        ''tasmime taze designed by
-                        <a target="_blank" class="animate-pulse duration-500 ease-out hover:animate-spin hover:text-sky-500" href="https://github.com/mohamadmahdi-87/AyandeRoshan"
-                            >''mohamadmahdi-87</a
-                        >
-                    </p>
-                </div>
+                </footer>
             </section>
         </footer>
-        <button id="backButton" title="برگشت به بالا" class="flex h-15 w-15 items-center justify-center rounded-full bg-blue-500 font-bold text-neutral-300 hover:bg-blue-700">
+        <button id="backButton" title="برگشت به بالا" class="flex h-15 w-15 items-center justify-center rounded-full bg-blue-500 font-bold text-neutral-50 hover:bg-blue-700">
             <i class="fa fa-arrow-up"></i>
         </button>
     </body>

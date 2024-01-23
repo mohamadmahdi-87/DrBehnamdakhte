@@ -7,10 +7,15 @@
 
 @font-face {
     font-family: "Yekan";
-    src:
-        url("/fonts/Nassim/BBCNassim.eot") format("truetype"),
-        url("/fonts/Nassim/BBCNassim.ttf") format("woff"),
-        url("/fonts/Nassim/BBCNassim.woff") format("woff2");
+    src: url("/fonts/Nassim/BBCNassim.woff") format("woff");
+}
+@font-face {
+    font-family: "nastaliq";
+    src: url("/fonts/NotoNastaliq.ttf") format("woff");
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 @keyframes bounce {

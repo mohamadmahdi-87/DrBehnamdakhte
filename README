@@ -191,3 +191,52 @@ news=>
 اخبار منطقه ای 
 اخبار شهرستان  ها
 ۴ نصویر با متن خبری  با کروسل
+
+
+
+
+
+
+
+ <section class="flex h-62 w-full flex-col bg-blue-900 px-8 text-white/80 md:flex-row">
+                <div class="mt-4 flex md:mt-16 md:basis-1/2">
+                    <div id="contactUs" class="flex flex-col">
+                        راه های ارتباطی :
+                        <!--  -->
+                        <div class="mt-4 flex flex-col gap-3">
+                            <div class="flex flex-row gap-2 rounded-full text-lg max-md:p-1 md:px-2 md:py-1">
+                                <a href="https://t.me/Dr_Bagheri_Ali">
+                                    <i class="text-telegram fab fa-telegram-plane duration-300 ease-out"></i>
+                                </a>
+                                <a href="https://www.instagram.com/tasmime_taze/">
+                                    <i class="text-instagram fab fa-instagram duration-300 ease-out"></i>
+                                </a>
+
+                                <a href="">
+                                    <i class="text-whatsapp fab fa-whatsapp duration-300 ease-out"></i>
+                                </a>
+                            </div>
+                            <contact class="flex flex-col text-sm lg:text-base">
+                                 <span>
+                                       <i class="fa fa-phone"></i>
+                                       شماره تلفن:
+                                       <span dir="ltr" id="number" class="duration-500 ease-out hover:text-sky-500">0911 223 9640</span>
+                                 </span>
+                                 <span>
+                                       <i class="fa fa-at"></i>
+                                       ایمیل:
+                                       <span id="email" class="relative duration-500 ease-out hover:text-sky-500">tasmimetaze@gmail.com</span>
+                                 </span>
+                            </contact>
+                        </div>
+                    </div>
+                </div>
+                <div id="aboutUs" data-te-smooth-scroll-init class="mt-4 flex flex-col md:mt-16 md:basis-1/2">
+                    <h1>درباره تصمیم تازه</h1>
+                    <p class="mt-4 w-full md:w-2/3">
+                        ''tasmime taze designed by
+                        <a target="_blank" class="animate-pulse duration-500 ease-out hover:animate-spin hover:text-sky-500" href="https://github.com/mohamadmahdi-87/AyandeRoshan"
+                            >''mohamadmahdi-87</a
+                        >
+                    </p>
+                </div>
