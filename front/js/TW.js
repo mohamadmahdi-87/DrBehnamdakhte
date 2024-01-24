@@ -1,10 +1,7 @@
-import { initTE, Input, Ripple } from "tw-elements";
+import { initTE, Input, Lightbox, Ripple } from "tw-elements";
 
 initTE({
     Input,
+    Lightbox,
     Ripple,
 });
-
-module.exports = {
-    plugins: ["prettier-plugin-tailwindcss"],
-};
