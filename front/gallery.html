@@ -14,6 +14,22 @@
         <link href="/css/all.min.css" rel="stylesheet" />
 
         <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+        <!-- Include the necessary CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+            integrity="sha512-QpIrNNvw2M6abCsTM/Sw4UzQp2ov5W/c1NZCpCh1GpJyqcoSNvOf7T8jKkaOwzLcFWZeuZJrNqz5e5Z5vDkgdw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Include the necessary JavaScript -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+            integrity="sha512-Ci7o/DG3xcumDja1UEckS+nsLYMWpDc7Pzd4FJluT8pou1rKLVtoPQywR1yBuHcQFvZ+jWEbfRWe9J7FwlrkRQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
 
         <script type="text/javascript" src="/front/js/alpine.min.js"></script>
         <script type="text/javascript" src="/front/js/jquery.min.js"></script>
@@ -32,7 +48,7 @@
         </script>
         <title>tasmime taze</title>
     </head>
-    <body>
+    <body id="top" class="no-scrollbar relative overflow-hidden bg-white font-Vazir">
         <!-- header lg -->
         <header id="header" class="fixed z-[9997] hidden w-full transform transition-transform duration-300 lg:block">
             <div class="mx-auto my-auto flex h-16 w-full items-center justify-between bg-blue-600 p-3 text-lg shadow-2xl">
@@ -44,7 +60,7 @@
                     </div>
 
                     <div>
-                        <ul role="list" class="flex items-center justify-between gap-5 text-sm text-white/90 child:py-8">
+                        <ul role="list" class="flex items-center justify-between gap-5 text-sm text-white/90 *:py-8">
                             <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
                                 <a href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه اصلی </a>
                             </li>
@@ -101,8 +117,6 @@
                                 x-show="sideNavLg"
                                 class="fixed right-0 top-0 z-[9999] rounded-lg"
                             >
-                                <!---->
-
                                 <div class="z-40 flex h-screen w-50 flex-col bg-blue-600">
                                     <ul class="flex flex-col gap-5 px-9 text-base text-neutral-50 first:mt-17 last:mb-7">
                                         <li>
@@ -125,9 +139,8 @@
                                         </li>
                                         <li class="relative flex flex-col" id="news1">
                                             <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار <i id="faAngleDown1" class="fa fa-angle-down text-xs transition-all"></i></a>
-
                                             <span id="newsDropdown1" class="static right-0 w-full pr-7 pt-4 text-neutral-200">
-                                                <ul class="flex flex-col gap-2 child:list-disc">
+                                                <ul class="flex flex-col gap-2 *:list-disc">
                                                     <li class="hover:text-emerald-300">اخبار استانی</li>
                                                     <li class="hover:text-emerald-300">اخبار شهرستانی</li>
                                                     <li class="hover:text-emerald-300">اخبار منطقه ای</li>
@@ -202,7 +215,7 @@
                                         </span>
 
                                         <span id="newsDropdownSm" class="static right-0 w-full pr-7 pt-4 text-neutral-200">
-                                            <ul class="flex flex-col gap-2 child:list-disc">
+                                            <ul class="flex flex-col gap-2 *:list-disc">
                                                 <li class="hover:text-emerald-300">اخبار استانی</li>
                                                 <li class="hover:text-emerald-300">اخبار شهرستانی</li>
                                                 <li class="hover:text-emerald-300">اخبار منطقه ای</li>
@@ -220,32 +233,59 @@
             </div>
         </header>
 
-        <main>
-            <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
-            <div data-te-lightbox-init class="flex flex-col space-y-5 lg:flex-row lg:space-x-5 lg:space-y-0">
-                <div class="h-full w-full">
-                    <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
-                        data-te-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
-                        alt="Table Full of Spices"
-                        class="w-full cursor-zoom-in rounded shadow-sm data-[te-lightbox-disabled]:cursor-auto"
-                    />
+        <!-- grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 -->
+
+        <main class="mx-16 my-20 flex flex-col justify-center gap-25">
+            <div x-data="imagesGallery()">
+                <div class="grid grid-cols-2 gap-4">
+                    <template x-for="(image, index) in images" :key="index">
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                    </template>
+                    <!-- Add captions for the images -->
+                    <div class="text-center">Caption for this img</div>
                 </div>
-                <div class="h-full w-full">
-                    <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/2.webp"
-                        data-te-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/2.webp"
-                        alt="Winter Landscape"
-                        class="w-full cursor-zoom-in rounded shadow-sm data-[te-lightbox-disabled]:cursor-auto"
-                    />
+
+                <!-- Modal -->
+                <div x-show="isOpen" class="no-scrollbar fixed inset-0 z-50 h-screen overflow-auto bg-black/50">
+                    <div class="relative flex h-screen items-center justify-center">
+                        <div @click.outside="closeModal" class="mx-auto max-w-screen-md">
+                            <img :src="images[currentImage]" class="h-auto w-full" alt="Zoomed Image" />
+                        </div>
+                        <button @click.stop="nextImage" class="absolute right-0 h-[120vh] bg-gray-100/50 px-4 text-center text-white">بعدی</button>
+                        <button @click.stop="prevImage" class="absolute left-0 h-[120vh] bg-gray-100/50 px-4 text-center text-white">قبلی</button>
+                    </div>
                 </div>
-                <div class="h-full w-full">
-                    <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/3.webp"
-                        data-te-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/3.webp"
-                        alt="View of the City in the Mountains"
-                        class="w-full cursor-zoom-in rounded shadow-sm data-[te-lightbox-disabled]:cursor-auto"
-                    />
+            </div>
+
+            <div class="text-center">caption for this img</div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center">
+                    <img src="/img/next-to-flag.jpg" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="/img/seyedGreenBack.jpg" class="w- h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
+                </div>
+            </div>
+            <div class="text-center">caption for this img</div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center">
+                    <img src="/img/inpeople.jpg" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="/img/inpeople.jpg" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="/img/inpeople.jpg" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
                 </div>
             </div>
         </main>
@@ -301,7 +341,7 @@
                                 </li>
                                 <li class="mb-4">
                                     <span>
-                                        <span id="email" class="relative duration-300 ease-out hover:text-emerald-300">bagheriali2020@gmail.com</span>
+                                        <span id="email" class="duration-300 ease-out hover:text-emerald-300">bagheriali2020@gmail.com</span>
                                     </span>
                                 </li>
                             </ul>
@@ -385,5 +425,6 @@
         <button id="backButton" title="برگشت به بالا" class="flex h-15 w-15 items-center justify-center rounded-full bg-blue-500 font-bold text-neutral-50 hover:bg-blue-700">
             <i class="fa fa-arrow-up"></i>
         </button>
+        <script></script>
     </body>
 </html>
