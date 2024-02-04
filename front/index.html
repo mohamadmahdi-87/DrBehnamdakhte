@@ -77,7 +77,7 @@
                                 </span>
                             </li>
                             <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
-                                <a href="#contactUs" class=""> <i class="fa fa-phone ml-2"></i> تماس با ما </a>
+                                <a href="#contactUs"> <i class="fa fa-phone ml-2"></i> تماس با ما </a>
                             </li>
                         </ul>
                     </div>
@@ -104,8 +104,8 @@
                             >
                                 <!---->
 
-                                <div class="z-40 flex h-screen w-50 flex-col bg-blue-600">
-                                    <ul class="flex flex-col gap-5 px-9 text-base text-neutral-50 first:mt-17 last:mb-7">
+                                <div class="z-40 flex h-[120vh] w-50 flex-col bg-blue-600">
+                                    <ul class="flex flex-col gap-5 px-9 text-base text-neutral-50 *:transition-all first:mt-17 last:mb-7 [&>*:hover]:text-amber-300">
                                         <li>
                                             <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
                                         </li>
@@ -149,7 +149,7 @@
         <!-- header sm md  -->
         <header class="w-full lg:hidden">
             <div class="flex w-screen items-center">
-                <ul class="mx-auto my-auto flex h-[120vh] w-full flex-row-reverse items-center justify-between bg-blue-800 p-8 text-base shadow-2xl">
+                <ul class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-8 text-base shadow-2xl">
                     <li class="">
                         <img class="w-15" src="/img/flower.png" alt="flower" />
                     </li>
@@ -176,8 +176,8 @@
                         >
                             <!---->
 
-                            <div class="z-40 flex h-[120vh] w-50 flex-col bg-blue-600">
-                                <ul class="flex flex-col justify-stretch gap-5 px-9 text-base text-neutral-50 first:mt-17 last:mb-7">
+                            <div class="z-40 flex h-screen w-50 flex-col bg-blue-600">
+                                <ul class="flex flex-col justify-stretch gap-7 px-9 text-base text-neutral-50 first:mt-17 last:mb-7 *:hover:text-amber-300 md:gap-5">
                                     <li>
                                         <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
                                     </li>
@@ -220,6 +220,7 @@
                 </ul>
             </div>
         </header>
+
         <!--enf of head -->
         <!--enf of head -->
         <!--enf of head -->
@@ -246,22 +247,22 @@
             </div>
             <div class="w-full basis-1/2 md:h-104">
                 <div class="my-10 text-center font-bold">
-                    <h1 class="inline-flex animate-bounce items-center justify-center font-nastaliq text-6xl text-primary-900 drop-shadow-[1px_2px_2.5px_rgba(0,0,0,0.6)] md:text-5xl">
+                    <h1 class="inline-flex animate-bounce items-center justify-center font-nastaliq text-6xl leading-[6rem] text-primary-900 drop-shadow-[1px_2px_2.5px_rgba(0,0,0,0.6)] md:text-5xl">
                         سید علی باقری قادیکلایی
                     </h1>
                 </div>
                 <div class="mx-7 mb-20 mt-20 flex flex-col justify-end gap-6 text-xl md:mx-20 [&>span>i]:mt-1 [&>span]:flex [&>span]:gap-2 [&>span]:text-gray-600">
-                    <span class=""> <i class="fas fa-vote-yea text-rose-600"></i> کاندیدای ششمین دوره شوراي اسلامی قائمشهر </span>
-                    <span class=""> <i class="fas fa-landmark text-green-600"></i>مدیریت دولتی با گرایش تصمیم‌گیری و خط‌مشی‌گذاری عمومی</span>
-                    <span class=""> <i class="fas fa-chart-line text-blue-600"></i> مشاور مدیریت و برنامه‌ریزی </span>
-                    <span class=""> <i class="fas fa-chart-pie text-orange-400"></i> مشاور مالی و بودجه </span>
+                    <span> <i class="fas fa-vote-yea text-rose-600"></i> کاندیدای ششمین دوره شوراي اسلامی قائمشهر </span>
+                    <span> <i class="fas fa-landmark text-green-600"></i>مدیریت دولتی با گرایش تصمیم‌گیری و خط‌مشی‌گذاری عمومی</span>
+                    <span> <i class="fas fa-chart-line text-blue-600"></i> مشاور مدیریت و برنامه‌ریزی </span>
+                    <span> <i class="fas fa-chart-pie text-orange-400"></i> مشاور مالی و بودجه </span>
                 </div>
             </div>
         </main>
         <!--enf of main-->
 
         <!-- start footer -->
-        <svg class="" viewBox="0 160 1440 150">
+        <svg viewBox="0 160 1440 150">
             <path
                 fill="#1E3A8A"
                 d="M0,256L60,261.3C120,267,240,277,360,266.7C480,256,600,224,720,229.3C840,235,960,277,1080,277.3C1200,277,1320,235,1380,213.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
@@ -270,10 +271,10 @@
         <footer class="z-10 w-full">
             <section class="flex flex-col bg-blue-900 px-8 text-white/80">
                 <div class="mx-auto w-full max-w-screen-xl">
-                    <div class="grid grid-cols-2 gap-8 px-4 py-6 md:grid-cols-4 lg:py-8">
+                    <div class="grid grid-cols-1 gap-8 px-4 py-6 last:mb-20 md:grid-cols-4 lg:py-8">
                         <div>
                             <i class="fas fa-envelope inline"></i>
-                            <h2 class="mr-1 inline text-xl">راه های ارتباطی</h2>
+                            <h2 id="contactUs" class="mr-1 inline text-xl">راه های ارتباطی</h2>
                             <ul class="mt-6">
                                 <li class="mb-4">
                                     <div class="flex flex-row items-center gap-2 rounded-full text-lg max-md:p-1 md:px-2 md:py-1">
@@ -312,9 +313,10 @@
                                 </li>
                                 <li class="mb-4">
                                     <span>
-                                        <span id="email" class="relative duration-300 ease-out hover:text-emerald-300">bagheriali2020@gmail.com</span>
+                                        <span id="email" class="relative duration-300 ease-out hover:text-emerald-300 max-sm:tracking-wider">bagheriali2020@gmail.com</span>
                                     </span>
                                 </li>
+                                <span id="copied" class="fixed left-[47%] top-25 hidden transform animate-bounce rounded-md bg-indigo-500 p-2 text-white transition-all">کپی شد</span>
                             </ul>
                         </div>
                         <div>
@@ -322,13 +324,13 @@
                             <h2 class="mr-1 inline text-xl">اخبار</h2>
                             <ul class="mt-6 text-neutral-300">
                                 <li class="mb-4">
-                                    <a href="#" class="duration-300 ease-out hover:text-emerald-300">اخبار استانی </a>
+                                    <a href="/front/ProvincialNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار استانی </a>
                                 </li>
                                 <li class="mb-4">
-                                    <a href="#" class="duration-300 ease-out hover:text-emerald-300">اخبار شهرستانی</a>
+                                    <a href="/front/CityNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار شهرستانی</a>
                                 </li>
                                 <li class="mb-4">
-                                    <a href="#" class="duration-300 ease-out hover:text-emerald-300">اخبار منطقه ای</a>
+                                    <a href="/front/RegionalNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار منطقه ای</a>
                                 </li>
                             </ul>
                         </div>
@@ -372,17 +374,17 @@
                             <i class="far fa-file-alt inline"></i>
                             <h2 class="mr-1 inline text-xl">مقالات</h2>
                             <ul class="mt-6 flex flex-col gap-4 text-neutral-300">
-                                <li class="">
+                                <li>
                                     <a href="https://irangn.ir/article_view.php?rahgiri=6146825079692174" class="duration-300 ease-out hover:text-emerald-300"
                                         >تأثیر جلب اعتماد مشتریان توسط سرمایه انسانی بر میزان رضایت</a
                                     >
                                 </li>
-                                <li class="">
+                                <li>
                                     <a href="https://irangn.ir/article_view.php?rahgiri=6146807362444821" class="duration-300 ease-out hover:text-emerald-300"
                                         >ارزیابی عملکرد مدیریت پروژه فاز ۱۳ پارس جنوبی با استاندارد جهانی PMBOK</a
                                     >
                                 </li>
-                                <li class="">
+                                <li>
                                     <a href="https://irangn.ir/article_view.php?rahgiri=6146824460425599" class="duration-300 ease-out hover:text-emerald-300"
                                         >توسعه بستر و زیرساخت "فاوا" جهت ارائه خدمات الکترونیکی به ذی¬نفعان</a
                                     >

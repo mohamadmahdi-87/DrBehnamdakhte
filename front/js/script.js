@@ -69,8 +69,7 @@ $(document).ready(function () {
             1,
         );
     });
-
-    $("#number , #email").click(function () {
+    $("#number, #email").click(function () {
         var textToCopy = $(this).text();
 
         var tempTextarea = $("<textarea>");
@@ -84,13 +83,13 @@ $(document).ready(function () {
 
         tempTextarea.remove();
 
-        $(this).append('<div class="copied p-2 bg-indigo-500 text-white rounded-md fixed top-8 left-1/2 transition-all animate-bounce transform -translate-x-1/2">کپی شد</div>');
-
-        setTimeout(function () {
-            $(".copied").remove();
-        }, 2000);
+        // Show and animate the copied message
+        $("#copied").fadeIn(500, function () {
+            setTimeout(function () {
+                $("#copied").fadeOut(500);
+            }, 1000);
+        });
     });
-
     $(document).ready(function () {
         $("#newsDropdown").addClass("hidden");
 
