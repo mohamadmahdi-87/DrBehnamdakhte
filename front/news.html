@@ -1,5 +1,5 @@
 <!doctype html>
-<html dir="rtl" lang="en">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,103 +23,38 @@
         <link href="/node_modules/@splidejs/splide/dist/css/splide.min.css" rel="stylesheet" />
         <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
         <script src="/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
-        <style>
-            .thumbnails {
-                display: flex;
-                margin: 1rem auto 0;
-                padding: 0;
-                justify-content: center;
-            }
-
-            .thumbnail {
-                width: 70px;
-                height: 70px;
-                overflow: hidden;
-                list-style: none;
-                margin: 0 0.2rem;
-                cursor: pointer;
-            }
-
-            .thumbnail img {
-                width: 100%;
-                height: auto;
-            }
-        </style>
-        <title>tasmime taze</title>
+        <title>Gallery</title>
     </head>
 
     <body id="top" class="no-scrollbar relative overflow-hidden bg-white font-Vazir">
-        <div class="">
-            <section dir="ltr" id="main-slider" class="splide flex flex-col justify-center" aria-label="My Awesome Gallery">
+        <div class="mt-20">
+            <section id="main-slider" class="splide h-screen">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img src="/img/seyedGreenBack.jpg" alt="" />
+                        <li class="splide__slide h-screen">
+                            <img class="w-full" src="/img/inPeople.jpg" alt="" />
                         </li>
-                        <li class="splide__slide">
-                            <img src="/img/inPeople.jpg" alt="" />
+                        <li class="splide__slide h-screen">
+                            <img class="w-full" src="/img/seyedGreenBack.jpg" alt="" />
                         </li>
-                        <li class="splide__slide">
-                            <img src="/img/next-to-flag.jpg" alt="" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="/img/whenSpeching.jpg" alt="" />
+                        <li class="splide__slide h-screen">
+                            <img class="w-full" src="/img/next-to-flag.jpg" alt="" />
                         </li>
                     </ul>
                 </div>
             </section>
+
+            <ul id="thumbnails" class="thumbnails">
+                <li class="thumbnail">
+                    <img src="/img/inPeople.jpg" alt="" />
+                </li>
+                <li class="thumbnail">
+                    <img src="/img/seyedGreenBack.jpg" alt="" />
+                </li>
+                <li class="thumbnail">
+                    <img src="/img/next-to-flag.jpg" alt="" />
+                </li>
+            </ul>
         </div>
-
-        <ul id="thumbnails" class="thumbnails">
-            <li class="thumbnail">
-                <img src="/img/seyedGreenBack.jpg" alt="" />
-            </li>
-            <li class="thumbnail">
-                <img src="/img/inPeople.jpg" alt="" />
-            </li>
-            <li class="thumbnail">
-                <img src="/img/next-to-flag.jpg" alt="" />
-            </li>
-            <li class="thumbnail">
-                <img src="/img/whenSpeching.jpg" alt="" />
-            </li>
-        </ul>
-
-        <script>
-            var splide = new Splide("#main-slider", {
-                width: 600,
-                height: 300,
-                pagination: false,
-                cover: true,
-            });
-
-            var thumbnails = document.getElementsByClassName("thumbnail");
-            var current;
-
-            for (var i = 0; i < thumbnails.length; i++) {
-                initThumbnail(thumbnails[i], i);
-            }
-
-            function initThumbnail(thumbnail, index) {
-                thumbnail.addEventListener("click", function () {
-                    splide.go(index);
-                });
-            }
-
-            splide.on("mounted move", function () {
-                var thumbnail = thumbnails[splide.index];
-
-                if (thumbnail) {
-                    if (current) {
-                        current.classList.remove("is-active");
-                    }
-
-                    thumbnail.classList.add("is-active");
-                    current = thumbnail;
-                }
-            });
-
-            splide.mount();
-        </script>
     </body>
 </html>

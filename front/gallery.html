@@ -13,24 +13,6 @@
         <link href="/css/solid.css" rel="stylesheet" />
         <link href="/css/all.min.css" rel="stylesheet" />
 
-        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
-        <!-- Include the necessary CSS -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
-            integrity="sha512-QpIrNNvw2M6abCsTM/Sw4UzQp2ov5W/c1NZCpCh1GpJyqcoSNvOf7T8jKkaOwzLcFWZeuZJrNqz5e5Z5vDkgdw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-
-        <!-- Include the necessary JavaScript -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
-            integrity="sha512-Ci7o/DG3xcumDja1UEckS+nsLYMWpDc7Pzd4FJluT8pou1rKLVtoPQywR1yBuHcQFvZ+jWEbfRWe9J7FwlrkRQ=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-
         <script type="text/javascript" src="/front/js/alpine.min.js"></script>
         <script type="text/javascript" src="/front/js/jquery.min.js"></script>
         <script type="text/javascript" src="/front/js/script.js"></script>
@@ -39,13 +21,7 @@
         <link href="/node_modules/@splidejs/splide/dist/css/splide.min.css" rel="stylesheet" />
         <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
         <script src="/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                new Splide(".splide").mount(window.splide.Extensions);
-            });
 
-            const { doc } = require("prettier");
-        </script>
         <title>tasmime taze</title>
     </head>
     <body id="top" class="no-scrollbar relative overflow-hidden bg-white font-Vazir">
@@ -234,23 +210,81 @@
         </header>
 
         <!-- grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 -->
+        <div>
+            <div class="mt-20">
+                <section dir="ltr" id="main-slider" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img class="w-full" src="/img/inPeople.jpg" alt="" />
+                            </li>
+                            <li class="splide__slide">
+                                <img class="w-full" src="/img/seyedGreenBack.jpg" alt="" />
+                            </li>
+                            <li class="splide__slide">
+                                <img class="w-full" src="/img/next-to-flag.jpg" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                </section>
 
+                <ul dir="ltr" id="thumbnails" class="thumbnails">
+                    <li class="thumbnail">
+                        <img src="/img/inPeople.jpg" alt="" />
+                    </li>
+                    <li class="thumbnail">
+                        <img src="/img/seyedGreenBack.jpg" alt="" />
+                    </li>
+                    <li class="thumbnail">
+                        <img src="/img/next-to-flag.jpg" alt="" />
+                    </li>
+                </ul>
+            </div>
+        </div>
         <main class="mx-16 my-20 flex flex-col justify-center gap-25">
             <div x-data="imagesGallery()">
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-3 gap-4">
                     <template x-for="(image, index) in images" :key="index">
                         <div class="flex justify-center">
-                            <img :src="image" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
                         </div>
                         <div class="flex justify-center">
-                            <img :src="image" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
                         </div>
                         <div class="flex justify-center">
-                            <img :src="image" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
                         </div>
                     </template>
                     <!-- Add captions for the images -->
-                    <div class="text-center">Caption for this img</div>
+                </div>
+
+                <!-- Modal -->
+                <div x-show="isOpen" class="no-scrollbar fixed inset-0 z-50 h-screen overflow-auto bg-black/50">
+                    <div class="relative flex h-screen items-center justify-center">
+                        <div @click.outside="closeModal" class="mx-auto max-w-screen-md">
+                            <img :src="images[currentImage]" class="h-auto w-full" alt="Zoomed Image" />
+                        </div>
+                        <button @click.stop="prevImage" class="absolute right-0 h-[120vh] bg-gray-100/50 px-4 text-center text-white">بعدی</button>
+                        <button @click.stop=" nextImage" class="absolute left-0 h-[120vh] bg-gray-100/50 px-4 text-center text-white">قبلی</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">caption for this img</div>
+            <div x-data="imagesGallery()">
+                <div class="grid grid-cols-3 gap-4">
+                    <template x-for="(image, index) in images" :key="index">
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                    </template>
+                    <!-- Add captions for the images -->
                 </div>
 
                 <!-- Modal -->
@@ -266,28 +300,35 @@
             </div>
 
             <div class="text-center">caption for this img</div>
-
-            <div class="grid grid-cols-2 gap-4">
-                <div class="flex justify-center">
-                    <img src="/img/next-to-flag.jpg" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
+            <div x-data="imagesGallery()">
+                <div class="grid grid-cols-3 gap-4">
+                    <template x-for="(image, index) in images" :key="index">
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                        <div class="flex justify-center">
+                            <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
+                        </div>
+                    </template>
+                    <!-- Add captions for the images -->
                 </div>
-                <div class="flex justify-center">
-                    <img src="/img/seyedGreenBack.jpg" class="w- h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
+
+                <!-- Modal -->
+                <div x-show="isOpen" class="no-scrollbar fixed inset-0 z-50 h-screen overflow-auto bg-black/50">
+                    <div class="relative flex h-screen items-center justify-center">
+                        <div @click.outside="closeModal" class="mx-auto max-w-screen-md">
+                            <img :src="images[currentImage]" class="h-auto w-full" alt="Zoomed Image" />
+                        </div>
+                        <button @click.stop="nextImage" class="absolute right-0 h-[120vh] bg-gray-100/50 px-4 text-center text-white">بعدی</button>
+                        <button @click.stop="prevImage" class="absolute left-0 h-[120vh] bg-gray-100/50 px-4 text-center text-white">قبلی</button>
+                    </div>
                 </div>
             </div>
+
             <div class="text-center">caption for this img</div>
-
-            <div class="grid grid-cols-2 gap-4">
-                <div class="flex justify-center">
-                    <img src="/img/inpeople.jpg" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
-                </div>
-                <div class="flex justify-center">
-                    <img src="/img/inpeople.jpg" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
-                </div>
-                <div class="flex justify-center">
-                    <img src="/img/inpeople.jpg" class="h-110 w-110 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" />
-                </div>
-            </div>
         </main>
 
         <svg class="" viewBox="0 160 1440 150">
@@ -299,7 +340,7 @@
         <footer class="z-10 w-full">
             <section class="flex flex-col bg-blue-900 px-8 text-white/80">
                 <div class="mx-auto w-full max-w-screen-xl">
-                    <div class="grid grid-cols-2 gap-8 px-4 py-6 md:grid-cols-4 lg:py-8">
+                    <div class="grid grid-cols-3 gap-8 px-4 py-6 md:grid-cols-4 lg:py-8">
                         <div>
                             <i class="fas fa-envelope inline"></i>
                             <h2 class="mr-1 inline text-xl">راه های ارتباطی</h2>
