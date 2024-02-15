@@ -1,4 +1,34 @@
 $(document).ready(function () {
+    // شیء حاوی معادل فارسی فایل‌ها
+    const fileTranslations = {
+        index: "تصمیم تازه",
+        articles: "مقالات",
+        bio: "بیوگرافی",
+        books: "تالیفات",
+        CityNews: "اخبار شهرستانی",
+        gallery: "گالری",
+        news: "اخبار",
+        ProvincialNews: "اخبار استانی",
+        RegionalNews: "اخبار منطقه ای",
+        speechs: "سخنرانی",
+        // ادامه ترجمه‌ها...
+    };
+
+    // تابع برای استخراج نام فایل بدون پسوند از مسیر و ترجمه
+    function getFileNameWithoutExtension(path) {
+        const fileName = path.split("/").pop(); // دریافت نام فایل
+        const nameWithoutExtension = fileName.split(".").slice(0, -1).join("."); // حذف پسوند فایل
+        return translateFileName(nameWithoutExtension); // ترجمه نام فایل بدون پسوند و بازگرداندن آن
+    }
+
+    // تابع برای ترجمه نام فایل
+    function translateFileName(fileName) {
+        return fileTranslations[fileName] || fileName; // اگر ترجمه وجود دارد، آن را بازگردانید، در غیر اینصورت نام فایل را بازگردانید
+    }
+
+    // تنظیم عنوان صفحه با نام فایل بدون پسوند و ترجمه
+    document.title = getFileNameWithoutExtension(window.location.pathname);
+
     let currentImageIndex = 0;
     const images = ["/img/seyedGreenBack.jpg", "/img/inpeople.jpg", "/img/next-to-flag.jpg", "/img/whenSpeching.jpg"];
 

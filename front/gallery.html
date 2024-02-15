@@ -213,7 +213,7 @@
         <div>
             <div class="mt-20">
                 <section dir="ltr" id="main-slider" class="splide">
-                    <div class="splide__track">
+                    <div class="splide__track rounded-lg">
                         <ul class="splide__list">
                             <li class="splide__slide">
                                 <img class="w-full" src="/img/inPeople.jpg" alt="" />
@@ -230,20 +230,20 @@
 
                 <ul dir="ltr" id="thumbnails" class="thumbnails">
                     <li class="thumbnail">
-                        <img src="/img/inPeople.jpg" alt="" />
+                        <img src="/img/inPeople.jpg" alt="" class="rounded-md" />
                     </li>
                     <li class="thumbnail">
-                        <img src="/img/seyedGreenBack.jpg" alt="" />
+                        <img src="/img/seyedGreenBack.jpg" alt="" class="rounded-md" />
                     </li>
                     <li class="thumbnail">
-                        <img src="/img/next-to-flag.jpg" alt="" />
+                        <img src="/img/next-to-flag.jpg" alt="" class="rounded-md" />
                     </li>
                 </ul>
             </div>
         </div>
         <main class="mx-16 my-20 flex flex-col justify-center gap-25">
             <div x-data="imagesGallery()">
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <template x-for="(image, index) in images" :key="index">
                         <div class="flex justify-center">
                             <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
@@ -257,7 +257,6 @@
                     </template>
                     <!-- Add captions for the images -->
                 </div>
-
                 <!-- Modal -->
                 <div x-show="isOpen" class="no-scrollbar fixed inset-0 z-50 h-screen overflow-auto bg-black/50">
                     <div class="relative flex h-screen items-center justify-center">
@@ -269,10 +268,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="text-center">caption for this img</div>
             <div x-data="imagesGallery()">
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <template x-for="(image, index) in images" :key="index">
                         <div class="flex justify-center">
                             <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
@@ -286,7 +284,6 @@
                     </template>
                     <!-- Add captions for the images -->
                 </div>
-
                 <!-- Modal -->
                 <div x-show="isOpen" class="no-scrollbar fixed inset-0 z-50 h-screen overflow-auto bg-black/50">
                     <div class="relative flex h-screen items-center justify-center">
@@ -298,10 +295,10 @@
                     </div>
                 </div>
             </div>
-
             <div class="text-center">caption for this img</div>
+
             <div x-data="imagesGallery()">
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <template x-for="(image, index) in images" :key="index">
                         <div class="flex justify-center">
                             <img :src="image" class="h-90 w-90 cursor-pointer overflow-hidden rounded-lg object-cover shadow-md" @click="openModal(index)" />
@@ -315,7 +312,6 @@
                     </template>
                     <!-- Add captions for the images -->
                 </div>
-
                 <!-- Modal -->
                 <div x-show="isOpen" class="no-scrollbar fixed inset-0 z-50 h-screen overflow-auto bg-black/50">
                     <div class="relative flex h-screen items-center justify-center">
@@ -327,7 +323,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="text-center">caption for this img</div>
         </main>
 
