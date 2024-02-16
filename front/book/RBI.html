@@ -1,0 +1,405 @@
+<!doctype html>
+<html dir="rtl" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href="\front\dist\tailwind-o.css" rel="stylesheet" />
+        <link href="/front/css/style.css" rel="stylesheet" />
+
+        <link href="/css/all.css" rel="stylesheet" />
+        <link href="/css/brands.css" rel="stylesheet" />
+        <link href="/css/regular.css" rel="stylesheet" />
+        <link href="/css/solid.css" rel="stylesheet" />
+        <link href="/css/all.min.css" rel="stylesheet" />
+
+        <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+
+        <script type="text/javascript" src="/front/js/alpine.min.js"></script>
+        <script type="text/javascript" src="/front/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/front\js\script.js"></script>
+        <script type="text/javascript" src="/front/js/TW.js"></script>
+
+        <link href="/node_modules/@splidejs/splide/dist/css/splide.min.css" rel="stylesheet" />
+        <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+        <script src="/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                new Splide(".splide").mount(window.splide.Extensions);
+            });
+
+            const { doc } = require("prettier");
+        </script>
+        <title>tasmime taze</title>
+        <link class="rounded-full" rel="icon" type="image/png" href="/img/ایکون.jpg" />
+    </head>
+
+    <body id="top" class="no-scrollbar relative overflow-hidden bg-white font-Vazir">
+        <!-- header lg -->
+        <header id="header" class="fixed z-[9997] hidden w-full transform transition-transform duration-300 lg:block">
+            <div class="mx-auto my-auto flex h-16 w-full items-center justify-between bg-blue-600 p-3 text-lg shadow-2xl">
+                <div class="flex items-center justify-between gap-4 md:gap-6 lg:gap-8">
+                    <div class="w-35">
+                        <a href="/front/index.html">
+                            <img src="/img/seyedalibagheri-lightGreen.png" alt="seyedalibagheri" />
+                        </a>
+                    </div>
+
+                    <div>
+                        <ul role="list" class="flex items-center justify-between gap-5 text-sm text-white/90 *:py-8">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                                <a href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه اصلی </a>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                                <a href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                                <a href="/front/gallery.html"> <i class="fa fa-images ml-2"></i>گالری</a>
+                            </li>
+
+                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                                <a href="/front/articles.html"> <i class="far fa-file-alt ml-2"></i>مقالات </a>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                                <a href="/front/books.html"> <i class="fa fa-feather ml-2"></i>تالیفات </a>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                                <a href="/front/speechs.html"> <i class="fa fa-podcast ml-2"></i>سخنرانی ها </a>
+                            </li>
+                            <li id="news" class="relative flex cursor-pointer items-center justify-center gap-1 px-2 py-1">
+                                <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار </a>
+                                <i id="faAngleDown" class="fa fa-angle-down text-xs transition-all"></i>
+                                <span x-cloak id="newsDropdown" class="absolute -right-[40%] top-19 w-35 rounded-lg bg-gray-300 p-5 text-neutral-700">
+                                    <ul class="flex flex-col gap-2">
+                                        <li class="hover:text-black">
+                                            <a href="/front/RegionalNews.html">اخبار استانی</a>
+                                        </li>
+                                        <li class="hover:text-black">
+                                            <a href="/front/CityNews.html">اخبار شهرستانی</a>
+                                        </li>
+                                        <li class="hover:text-black">
+                                            <a href="/front/ProvincialNews.html">اخبار منطقه ای</a>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                                <a href="#contactUs"> <i class="fa fa-phone ml-2"></i> تماس با ما </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <span class="absolute -left-35 top-0 h-16 w-95 -skew-x-[70deg] bg-blue-700/50"> </span>
+                <div class="flex items-center justify-between">
+                    <ul class="flex items-center justify-between gap-3 text-white/90">
+                        <li x-data="{ sideNavLg : false }" class="relative">
+                            <div @click="sideNavLg = true" class="ml-4 text-lg">
+                                <i class="fa fa-bars px-2 pt-1"></i>
+                            </div>
+                            <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="sideNavLg" @click="sideNavLg=false"></div>
+                            <div
+                                @click.away="sideNavLg=false"
+                                @keydown.escape="sideNavLg = false"
+                                x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                                x-transition:enter-start="opacity-0 transform translate-x-20"
+                                x-transition:enter-end="opacity-100 transform -translate-y-0"
+                                x-transition:leave="transition  ease-in duration-300"
+                                x-transition:leave-end="opacity-0 transform translate-x-20"
+                                x-show="sideNavLg"
+                                class="fixed right-0 top-0 z-[9999] rounded-lg"
+                            >
+                                <div class="z-40 flex h-[120vh] w-50 flex-col bg-blue-600">
+                                    <ul class="flex flex-col gap-5 px-9 text-base text-neutral-50 *:transition-all first:mt-17 last:mb-7 [&>*:hover]:text-amber-300">
+                                        <li>
+                                            <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/articles.html"> <i class="fas fa-clipboard ml-2"></i>مقالات</a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/books.html"> <i class="fas fa-graduation-cap ml-2"></i>تالیفات</a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/gallery.html"> <i class="fas fa-images ml-2"></i>گالری</a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/speechs.html"> <i class="fas fa-book ml-2"></i>سخنرانی ها</a>
+                                        </li>
+                                        <li class="relative flex flex-col" id="news1">
+                                            <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار <i id="faAngleDown1" class="fa fa-angle-down text-xs transition-all"></i></a>
+                                            <span id="newsDropdown1" class="static right-0 w-full pr-7 pt-4 text-neutral-200">
+                                                <ul class="flex flex-col gap-2 *:list-disc">
+                                                    <li class="hover:text-emerald-300">
+                                                        <a href="/front/RegionalNews.html">اخبار استانی</a>
+                                                    </li>
+                                                    <li class="hover:text-emerald-300">
+                                                        <a href="/front/CityNews.html">اخبار شهرستانی</a>
+                                                    </li>
+                                                    <li class="hover:text-emerald-300">
+                                                        <a href="/front/ProvincialNews.html">اخبار منطقه ای</a>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="#Social-activities"> <i class="fas fa-users ml-2"></i> تماس با ما </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- header sm md  -->
+        <header class="w-full lg:hidden">
+            <div class="flex w-screen items-center">
+                <ul class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-8 text-base shadow-2xl">
+                    <li class="">
+                        <img class="w-15" src="/img/flower.png" alt="flower" />
+                    </li>
+                    <li class="flex">
+                        <a href="" class="w-35">
+                            <img src="/img/seyedalibagheri-lightGreen.png" alt="seyedalibagheri" />
+                        </a>
+                    </li>
+                    <li x-data="{ sideNavSm : false }" class="relative">
+                        <div @click="sideNavSm = true" class="text-lg">
+                            <i class="fa fa-bars px-2 pt-1 text-neutral-200"></i>
+                        </div>
+                        <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="sideNavSm" @click="sideNavSm=false"></div>
+                        <div
+                            @click.away="sideNavSm=false"
+                            @keydown.escape="sideNavSm = false"
+                            x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                            x-transition:enter-start="opacity-0 transform translate-x-20"
+                            x-transition:enter-end="opacity-100 transform -translate-y-0"
+                            x-transition:leave="transition  ease-in duration-300"
+                            x-transition:leave-end="opacity-0 transform translate-x-20"
+                            x-show="sideNavSm"
+                            class="fixed right-0 top-0 z-[9999] rounded-lg"
+                        >
+                            <div class="z-40 flex h-screen w-50 flex-col bg-blue-600">
+                                <ul class="flex flex-col justify-stretch gap-7 px-9 text-base text-neutral-50 first:mt-17 last:mb-7 *:hover:text-amber-300 md:gap-5">
+                                    <li>
+                                        <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/articles.html"> <i class="fas fa-clipboard ml-2"></i>مقالات</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/books.html"> <i class="fas fa-feather ml-2"></i>تالیفات</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/gallery.html"> <i class="fas fa-images ml-2"></i>گالری</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/speechs.html"> <i class="fas fa-book ml-2"></i>سخنرانی ها</a>
+                                    </li>
+                                    <li class="relative flex flex-col" id="newsSm">
+                                        <span class="flex items-center gap-3">
+                                            <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار </a>
+                                            <i id="faAngleDownSm" class="fa fa-angle-down text-xs transition-all"></i>
+                                        </span>
+
+                                        <span id="newsDropdownSm" class="static right-0 w-full pr-7 pt-4 text-neutral-200">
+                                            <ul class="flex flex-col gap-2 *:list-disc">
+                                                <li class="hover:text-emerald-300">
+                                                    <a href="/front/RegionalNews.html">اخبار استانی</a>
+                                                </li>
+                                                <li class="hover:text-emerald-300">
+                                                    <a href="/front/CityNews.html">اخبار شهرستانی</a>
+                                                </li>
+                                                <li class="hover:text-emerald-300">
+                                                    <a href="/front/ProvincialNews.html">اخبار منطقه ای</a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="#Social-activities"> <i class="fas fa-users ml-2"></i> تماس با ما </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="mx-auto mt-22 w-11/12 rounded-xl bg-neutral-50 shadow-2xl">
+            <div class="w-full rounded-t-xl bg-gray-200 py-3 text-neutral-700 shadow-sm">
+                <span class="px-3"> مدیریت بازرسی بر مبنای ریسک RBI (Risk Base Inespected) </span>
+            </div>
+            <main class="flex rounded-b-lg p-5 max-sm:flex-col md:grid-cols-4">
+                <div class="flex basis-1/4">
+                    <img class="w-60 rounded-xl shadow-lg transition-all duration-300 group-hover:scale-105" src="/img/کتاب مدیریت بازرسی بر مبنای ریسک.jpg" alt="" />
+                </div>
+                <div class="flex basis-3/4">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                    تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم
+                    افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                    راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن
+                    ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
+                    بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت
+                    تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </div>
+            </main>
+        </div>
+
+        <!-- start footer -->
+        <svg viewBox="0 160 1440 150">
+            <path
+                fill="#1E3A8A"
+                d="M0,256L60,261.3C120,267,240,277,360,266.7C480,256,600,224,720,229.3C840,235,960,277,1080,277.3C1200,277,1320,235,1380,213.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+            ></path>
+        </svg>
+        <footer class="z-10 w-full">
+            <section class="flex flex-col bg-blue-900 px-8 text-white/80">
+                <div class="mx-auto w-full max-w-screen-xl">
+                    <div class="grid grid-cols-1 gap-8 px-4 py-6 last:mb-10 md:grid-cols-4 lg:py-8">
+                        <div>
+                            <i class="fas fa-envelope inline"></i>
+                            <h2 id="contactUs" class="mr-1 inline text-xl">راه های ارتباطی</h2>
+                            <ul class="mt-6">
+                                <li class="mb-4">
+                                    <div class="flex flex-row items-center gap-2 rounded-full text-lg max-md:p-1 md:px-2 md:py-1">
+                                        <a href="https://t.me/Dr_Bagheri_Ali">
+                                            <i class="text-telegram fab fa-telegram-plane duration-300 ease-out"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/tasmime_taze/">
+                                            <i class="text-instagram fab fa-instagram duration-300 ease-out"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="text-whatsapp fab fa-whatsapp duration-300 ease-out"></i>
+                                        </a>
+                                        <a class="mb-1.5 h-4 w-4" href="">
+                                            <svg class="fill-current duration-300 ease-out hover:text-[#FF8100]" viewBox="0 0 3584.55 3673.6">
+                                                <path
+                                                    d="M1071.43,2.75H2607.66C3171,2.75,3631.82,462.91,3631.82,1026.2v493.93c-505,227-1014.43,1348.12-1756.93,1104.51-61.16,43.46-202.11,222.55-212,358.43-257.11-34.24-553.52-328.88-517.95-646.62C717,2026.91,1070.39,1455.5,1409.74,1225.51c727.32-492.94,1737.05-69,1175.39,283.45-341.52,214.31-1071.84,355.88-995.91-170.24-200.34,57.78-328.58,431.34-87.37,626-223.45,219.53-180.49,623.07,58.36,755.57,241.56-625.87,1082.31-544.08,1422-1291.2,255.57-562-123.34-1202.37-880.91-1104C1529.56,399.34,993.64,881.63,725.62,1453.64,453.68,2034,494.15,2811.15,1052.55,3202.82c657.15,460.92,1356.78,34.13,1780.52-523.68,249.77-328.78,468-693,798.75-903.37v875.72c0,563.28-460.88,1024.86-1024.16,1024.86H1071.43c-563.29,0-1024.16-460.87-1024.16-1024.16V1026.9C47.27,463.61,508.14,2.74,1071.43,2.74Z"
+                                                />
+                                            </svg>
+                                        </a>
+                                        <a class="mb-1.5 h-4 w-4" href="">
+                                            <svg class="fill-current duration-300 ease-out hover:text-[#00AB80]" viewBox="0 0 1000 999.63">
+                                                <g>
+                                                    <path
+                                                        d="M1009.65,466.44c-1.3-21.39-5-42.79-9.7-63.78C987.56,346,964.66,291.8,933.47,242.91,863.09,132.24,747.53,51,619,24a411.57,411.57,0,0,0-57.28-9.1,443.14,443.14,0,0,0-76.38-1.7,388.45,388.45,0,0,0-61.88,7.2c-18.7,2.6-36.89,7.8-55,12.69-16.9,5.3-33.69,11.3-50.09,18.2a469.62,469.62,0,0,0-45.78,22.09,437.61,437.61,0,0,0-42.69,26.29,100.06,100.06,0,0,1-10.6,6.8c-34.19-26-68.78-51.38-104.77-74.77-9.89-6.1-19.49-13-30.59-16.7-18.19-6.4-39.48-1.5-53.78,11.5C16.55,38.57,10.66,57.37,12.26,75.26c.1,23.79-.1,47.69.2,71.48-.3,24-.1,48.18-.2,72.18s-.1,48,.1,72q-.3,42,0,83.87-.3,40.78.1,81.57c.2,34-1.6,68.18,2.19,102.07,2.7,34.89,9.9,69.48,20.3,102.77,47.38,154.85,175.24,283,330.8,328.3l.1.6c32.39,9.6,65.68,16.7,99.27,19.29,37.28,3.6,75.07,3.5,112.16-2.19,19.9-1.5,39.39-6.4,58.88-10.7A566.24,566.24,0,0,0,702,974.59c20.1-8.6,40-17.9,58.89-29.1a455,455,0,0,0,48.38-31.59,496.83,496.83,0,0,0,51.28-43.48,486.75,486.75,0,0,0,35.19-38A500,500,0,0,0,926.27,792c8.6-12.79,16.6-26.09,24.3-39.49,7.89-15.19,15.49-30.39,22.29-46.08,7.4-18.8,14.7-37.69,19.89-57.18,4.4-16,9.2-32,10.8-48.49,4.2-17.39,6.1-35.69,6.8-53.48A412.52,412.52,0,0,0,1009.65,466.44ZM826.51,400.86c-6.1,16.2-16.8,30.09-29.5,41.69-11.09,11-22.09,22.09-33.19,33.19-11.79,11.79-23.59,23.49-35.28,35.39-11.3,11.19-22.6,22.39-33.89,33.79-12.3,12.29-24.7,24.59-36.89,36.89-14,14.09-28.09,28-42.09,42.08-13.2,13.3-26.49,26.49-39.79,39.79s-26.79,26.69-40.09,40.09c-12.29,11.79-23.49,24.89-37.38,35a105.49,105.49,0,0,1-57.89,16c-23.59-1.5-46.68-10.79-63.68-27.39q-78.42-78.42-156.95-157c-12.79-12.7-21.39-29.09-26-46.39-4.8-23.89-2-49.48,10.3-70.77,9.39-16.5,23.79-29.6,40.18-39a107.88,107.88,0,0,1,57.89-9.7c21.39,3.2,41.88,13,56.88,28.79,28.39,28.39,56.68,56.88,85.27,85.18,8.6-8.2,16.9-16.8,25.1-25.3,12-11.49,23.79-23.29,35.28-35.39,11.4-10.59,22.3-21.79,33.09-33.09,7.7-6.89,14.7-14.49,22.1-21.79,12-11.7,23.69-23.59,35.39-35.49,11.29-10.79,22.19-22,33.09-33,11.79-11.49,23.29-23.29,35-34.89a106.64,106.64,0,0,1,42.18-26.39A107.77,107.77,0,0,1,768,274.5c25.7,9.8,46.29,30,57.59,54.88C833.9,352.28,834.9,377.87,826.51,400.86Z"
+                                                        transform="translate(-12 -12.19)"
+                                                    />
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="mb-4">
+                                    <span>
+                                        <span dir="ltr" id="number" class="duration-300 ease-out hover:text-emerald-300">
+                                            <a href="tel:+989112239640">0911 223 9640</a>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li class="mb-4">
+                                    <span>
+                                        <span id="email" class="relative duration-300 ease-out hover:text-emerald-300 max-sm:tracking-wider">
+                                            <a href="mailto:bagheriali2020@gmail.com">bagheriali2020@gmail.com</a>
+                                        </span>
+                                    </span>
+                                </li>
+                                <span id="copied" class="fixed left-[47%] top-25 hidden transform animate-bounce rounded-md bg-indigo-500 p-2 text-white transition-all">کپی شد</span>
+                            </ul>
+                        </div>
+                        <div>
+                            <i class="fas fa-newspaper inline"></i>
+                            <h2 class="mr-1 inline text-xl">
+                                <a href="/front/news.html">اخبار</a>
+                            </h2>
+                            <ul class="mt-6 text-neutral-300">
+                                <li class="mb-4">
+                                    <a href="/front/ProvincialNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار استانی </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="/front/CityNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار شهرستانی</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="/front/RegionalNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار منطقه ای</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a class="mb-6 flex items-center gap-2" href="front/books.html">
+                                <i class="fas fa-feather"></i>
+                                <h2 class="text-xl">تالیفات</h2>
+                            </a>
+                            <ul class="text-neutral-300">
+                                <li class="mb-4">
+                                    <a
+                                        href="https://irangn.ir/book_view.php?id=1824&title=%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA%20%D9%BE%D8%B1%D9%88%DA%98%D9%87%20%D8%A8%D8%A7%20%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%A7%D8%B1%D8%AF%20%D8%AC%D9%87%D8%A7%D9%86%DB%8C%20PMBOK"
+                                        class="duration-300 ease-out hover:text-emerald-300"
+                                        >مدیریت پروژه با استاندارد جهانی
+                                    </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a
+                                        href="https://irangn.ir/book_view.php?id=1825&title=%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA%20%D8%A8%D8%A7%D8%B2%D8%B1%D8%B3%DB%8C%20%D8%A8%D8%B1%20%D9%85%D8%A8%D9%86%D8%A7%DB%8C%20%D8%B1%DB%8C%D8%B3%DA%A9%20(RBI(Risk%20Base%20Inespected"
+                                        class="duration-300 ease-out hover:text-emerald-300"
+                                        >مدیریت بازرسی بر مبنای ریسک
+                                    </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a
+                                        href="https://irangn.ir/book_view.php?id=1826&title=%DA%A9%D8%A7%D8%B1%20%D8%A7%D8%B2%20%D8%B1%D8%A7%D9%87%20%D8%AF%D9%88%D8%B1%20Teleworking(%D8%A7%D9%85%DA%A9%D8%A7%D9%86%20%D8%B3%D9%86%D8%AC%DB%8C%D8%8C%D9%BE%DB%8C%D8%A7%D8%AF%D9%87%20%D8%B3%D8%A7%D8%B2%DB%8C%D8%8C%DA%86%D8%A7%D9%84%D8%B4%20%D9%87%D8%A7%20%D9%88%20%D8%B1%D8%A7%D9%87%DA%A9%D8%A7%D8%B1%D9%87%D8%A7)"
+                                        class="duration-300 ease-out hover:text-emerald-300"
+                                        >کار از راه دور
+                                    </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a
+                                        href="https://irangn.ir/book_view.php?id=1827&title=%DA%A9%DB%8C%D9%81%DB%8C%D8%AA%20%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%DA%A9%D8%A7%D8%B1%DB%8C%20Quality%20of%20Work%20Life%20%D8%A8%D8%A7%20%D9%85%D8%AF%D9%84%20%D8%A8%D9%88%D9%85%DB%8C"
+                                        class="duration-300 ease-out hover:text-emerald-300"
+                                        >کیفیت زندگی کاری با مدل بومی</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <i class="far fa-file-alt inline"></i>
+                            <h2 class="mr-1 inline text-xl">
+                                <a href="/front/articles.html">مقالات</a>
+                            </h2>
+                            <ul class="mt-6 flex flex-col gap-4 text-neutral-300">
+                                <li>
+                                    <a href="https://irangn.ir/article_view.php?rahgiri=6146825079692174" class="duration-300 ease-out hover:text-emerald-300"
+                                        >تأثیر جلب اعتماد مشتریان توسط سرمایه انسانی بر میزان رضایت</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://irangn.ir/article_view.php?rahgiri=6146807362444821" class="duration-300 ease-out hover:text-emerald-300"
+                                        >ارزیابی عملکرد مدیریت پروژه فاز ۱۳ پارس جنوبی با استاندارد جهانی PMBOK</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://irangn.ir/article_view.php?rahgiri=6146824460425599" class="duration-300 ease-out hover:text-emerald-300"
+                                        >توسعه بستر و زیرساخت "فاوا" جهت ارائه خدمات الکترونیکی به ذی¬نفعان</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <button id="backButton" title="برگشت به بالا" class="flex h-15 w-15 items-center justify-center rounded-full bg-blue-500 font-bold text-neutral-50 hover:bg-blue-700">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+    </body>
+</html>

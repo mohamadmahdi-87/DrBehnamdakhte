@@ -89,13 +89,12 @@
                         </ul>
                     </div>
                 </div>
-
                 <span class="absolute -left-35 top-0 h-16 w-95 -skew-x-[70deg] bg-blue-700/50"> </span>
                 <div class="flex items-center justify-between">
                     <ul class="flex items-center justify-between gap-3 text-white/90">
                         <li x-data="{ sideNavLg : false }" class="relative">
                             <div @click="sideNavLg = true" class="ml-4 text-lg">
-                                <i class="fa fa-bars px-2 pt-1"></i>
+                                <i class="fa fa-bars cursor-pointer px-2 pt-1"></i>
                             </div>
                             <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="sideNavLg" @click="sideNavLg=false"></div>
                             <div
@@ -185,7 +184,7 @@
                             class="fixed right-0 top-0 z-[9999] rounded-lg"
                         >
                             <div class="z-40 flex h-screen w-50 flex-col bg-blue-600">
-                                <ul class="flex flex-col justify-stretch gap-7 px-9 text-base text-neutral-50 first:mt-17 last:mb-7 *:hover:text-amber-300 md:gap-5">
+                                <ul class="flex flex-col justify-stretch gap-7 px-9 text-base text-neutral-50 first:mt-17 last:mb-7 md:gap-5 [&>li:hover]:text-amber-300">
                                     <li>
                                         <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
                                     </li>
