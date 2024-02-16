@@ -121,12 +121,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
     opacity: 0.7;
 }
-.basis-3\/4 {
-    flex-basis: 75%;
-}
-.basis-1\/4 {
-    flex-basis: 25%;
-}
+
 .thumbnail.is-active {
     opacity: 1;
     width: 80px;
