@@ -956,6 +956,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   z-index: 999;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .order-1 {
   order: 1;
 }
@@ -1230,6 +1234,18 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .mt-\[0\.15rem\] {
   margin-top: 0.15rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
 }
 
 .box-border {

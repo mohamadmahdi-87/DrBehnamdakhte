@@ -36,7 +36,7 @@
 
     <body id="top" class="no-scrollbar relative overflow-hidden bg-white font-Vazir">
         <!-- header lg -->
-        <header id="header" class="fixed z-[9997] hidden w-full transform transition-transform duration-300 lg:block">
+        <header id="header-lg" class="fixed z-[9997] mb-16 hidden w-full transform transition-transform duration-300 lg:block">
             <div class="mx-auto my-auto flex h-16 w-full items-center justify-between bg-blue-600 p-3 text-lg shadow-2xl">
                 <div class="flex items-center justify-between gap-4 md:gap-6 lg:gap-8">
                     <div class="w-35">
@@ -156,9 +156,9 @@
             </div>
         </header>
         <!-- header sm md  -->
-        <header class="w-full lg:hidden">
+        <header id="header-ms" class="fixed mb-16 w-full transform transition-transform duration-300 lg:hidden">
             <div class="flex w-screen items-center">
-                <ul class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-8 text-base shadow-2xl">
+                <ul class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-4 text-base shadow-2xl">
                     <li class="">
                         <img class="w-15" src="/img/flower.png" alt="flower" />
                     </li>
@@ -237,7 +237,7 @@
         <!--enf of head -->
         <!--enf of head -->
         <!--enf of head -->
-        <main class="mt-8 flex flex-col items-center md:mx-auto md:h-[100vh] md:flex-row-reverse md:justify-evenly">
+        <main class="mt-24 flex flex-col items-center md:mx-auto md:h-[100vh] md:flex-row-reverse md:justify-evenly">
             <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
             <div class="flex basis-1/2 justify-center">
                 <div class="m-10 flex flex-wrap md:m-0 md:w-100">
@@ -260,7 +260,9 @@
             </div>
             <div class="w-full basis-1/2 md:h-104">
                 <div class="my-10 text-center font-bold">
-                    <h1 class="inline-flex animate-bounce items-center justify-center font-nastaliq text-6xl leading-[6rem] text-primary-900 drop-shadow-[1px_2px_2.5px_rgba(0,0,0,0.6)] md:text-5xl">
+                    <h1
+                        class="sticky -z-10 inline-flex animate-bounce items-center justify-center font-nastaliq text-6xl leading-[6rem] text-primary-900 drop-shadow-[1px_2px_2.5px_rgba(0,0,0,0.6)] md:text-5xl"
+                    >
                         سید علی باقری قادیکلایی
                     </h1>
                 </div>

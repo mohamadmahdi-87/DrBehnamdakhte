@@ -201,30 +201,17 @@ function imagesGallery() {
 }
 $(document).ready(function () {
     let prevScrollpos = window.pageYOffset;
-    let isImageOpen = false;
-
-    // Function to handle image opening
-    function openImage() {
-        isImageOpen = true;
-        $("#header").addClass("hidden");
-    }
-
-    // Function to handle image closing
-    function closeImage() {
-        isImageOpen = false;
-        $("#header").removeClass("hidden");
-    }
 
     // Set up scroll event listener
     $(window).scroll(function () {
         let currentScrollPos = window.pageYOffset;
 
-        // Check if an image is open
-        if (!isImageOpen) {
+        // Check if no image is open
+        if (!$(".image-container").hasClass("open")) {
             if (prevScrollpos > currentScrollPos) {
-                $("#header").css("transform", "translateY(0)");
+                $("#header-lg , #header-ms").css("transform", "translateY(0)");
             } else {
-                $("#header").css("transform", "translateY(-100%)");
+                $("#header-lg , #header-ms").css("transform", "translateY(-100%)");
             }
         }
 
