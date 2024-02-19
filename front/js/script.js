@@ -183,7 +183,21 @@ function imagesGallery() {
     return {
         isOpen: false,
         currentImage: 0,
-        images: ["/img/whenSpeching.jpg", "/img/inpeople.jpg", "/img/next-to-flag.jpg", "/img/seyedGreenBack.jpg"],
+        images: [
+            "/img/dakhte/4nafareDakhte.jpg",
+            "/img/dakhte/dakhteWithBaghery.jpg",
+            "/img/dakhte/darhalDoa.jpg",
+            "/img/dakhte/dastjamie2.jpg",
+            "/img/dakhte/seNafare3.jpg",
+            "/img/dakhte/teamFootbal.jpg",
+            "/img/dakhte/dastjamieBehnamDakhte.jpg",
+            "/img/dakhte/doNafare2.jpg",
+            "/img/dakhte/doNafare3.jpg",
+            "/img/dakhte/dorhamiDakhte.jpg",
+            "/img/dakhte/dorhamiDakhte4.jpg",
+            "/img/dakhte/dorhamiDakhte3.jpg",
+            "/img/dakhte/dorhamiDakhte5.jpg",
+        ],
         openModal(index) {
             this.currentImage = index;
             this.isOpen = true;
@@ -228,7 +242,7 @@ $(document).ready(function () {
     });
     var splide = new Splide("#main-slider", {
         width: "85%",
-        height: "90vh",
+        height: "73vh",
         pagination: false,
         cover: true,
     });
@@ -261,3 +275,34 @@ $(document).ready(function () {
 
     splide.mount();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    new Splide("#splide", {
+        type: "loop",
+        perPage: 1,
+        autoplay: true,
+        interval: 3000,
+        pauseOnHover: true,
+    }).mount();
+});
+// $(document).ready(function () {
+//     // فهرستی از فرزنده‌های ul
+//     var listItems = $("#scrollNews li");
+//     // فهرستی از نمایش داده شده
+//     var visibleIndex = 0;
+//     // اولین فرزند را نمایش دهید
+//     $(listItems[visibleIndex]).show();
+
+//     // انجام انیمیشن و نمایش فرزند بعدی
+//     function showNextItem() {
+//         // مخفی کردن فرزند فعلی
+//         $(listItems[visibleIndex]).fadeOut();
+//         // افزایش شاخص نمایش داده شده
+//         visibleIndex = (visibleIndex + 1) % listItems.length;
+//         // نمایش فرزند بعدی با انیمیشن
+//         $(listItems[visibleIndex]).fadeIn();
+//     }
+
+//     // انجام انیمیشن هر ۳ ثانیه
+//     setInterval(showNextItem, 800);
+// });
