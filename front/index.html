@@ -23,14 +23,6 @@
         <link href="/node_modules/@splidejs/splide/dist/css/splide.min.css" rel="stylesheet" />
         <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
         <script src="/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                new Splide(".splide").mount(window.splide.Extensions);
-            });
-
-            const { doc } = require("prettier");
-        </script>
-        <title>tasmime taze</title>
         <link class="rounded-full" rel="icon" type="image/png" href="/img/ایکون.jpg" />
     </head>
 
@@ -46,27 +38,27 @@
                     </div>
 
                     <div>
-                        <ul role="list" class="flex items-center justify-between gap-5 text-sm text-white/90 *:py-8">
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                        <ul role="list" class="flex items-center justify-between gap-5 text-sm text-white/90 *:py-7">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه اصلی </a>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/gallery.html"> <i class="fa fa-images ml-2"></i>گالری</a>
                             </li>
 
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/articles.html"> <i class="far fa-file-alt ml-2"></i>مقالات </a>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/books.html"> <i class="fa fa-feather ml-2"></i>تالیفات </a>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/speechs.html"> <i class="fa fa-podcast ml-2"></i>سخنرانی ها </a>
                             </li>
-                            <li id="news" class="relative flex cursor-pointer items-center justify-center gap-1 px-2 py-1">
+                            <li id="news" class="relative flex cursor-pointer items-center justify-center gap-1 py-1 [&>a]:p-2">
                                 <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار </a>
                                 <i id="faAngleDown" class="fa fa-angle-down text-xs transition-all"></i>
                                 <span x-cloak id="newsDropdown" class="absolute -right-[40%] top-19 w-35 rounded-lg bg-gray-300 p-5 text-neutral-700">
@@ -83,7 +75,7 @@
                                     </ul>
                                 </span>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="#contactUs"> <i class="fa fa-phone ml-2"></i> تماس با ما </a>
                             </li>
                         </ul>

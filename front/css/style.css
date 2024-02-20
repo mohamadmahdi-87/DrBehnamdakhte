@@ -1,3 +1,24 @@
+.splide__slide {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.splide__slide img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.splide__slide p {
+    max-width: 60%;
+    text-align: justify;
+}
+
 @font-face {
     font-family: "Vazir";
     src:

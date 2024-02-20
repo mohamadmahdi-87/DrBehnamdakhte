@@ -23,20 +23,12 @@
         <link href="/node_modules/@splidejs/splide/dist/css/splide.min.css" rel="stylesheet" />
         <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
         <script src="/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                new Splide(".splide").mount(window.splide.Extensions);
-            });
-
-            const { doc } = require("prettier");
-        </script>
-        <title>tasmime taze</title>
         <link class="rounded-full" rel="icon" type="image/png" href="/img/ایکون.jpg" />
     </head>
 
     <body id="top" class="no-scrollbar relative overflow-hidden bg-white font-Vazir">
         <!-- header lg -->
-        <header id="header" class="fixed z-[9997] hidden w-full transform transition-transform duration-300 lg:block">
+        <header id="header-lg" class="fixed z-[9997] mb-16 hidden w-full transform transition-transform duration-300 lg:block">
             <div class="mx-auto my-auto flex h-16 w-full items-center justify-between bg-blue-600 p-3 text-lg shadow-2xl">
                 <div class="flex items-center justify-between gap-4 md:gap-6 lg:gap-8">
                     <div class="w-35">
@@ -46,27 +38,27 @@
                     </div>
 
                     <div>
-                        <ul role="list" class="flex items-center justify-between gap-5 text-sm text-white/90 *:py-8">
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                        <ul role="list" class="flex items-center justify-between gap-5 text-sm text-white/90 *:py-7">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه اصلی </a>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/gallery.html"> <i class="fa fa-images ml-2"></i>گالری</a>
                             </li>
 
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/articles.html"> <i class="far fa-file-alt ml-2"></i>مقالات </a>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/books.html"> <i class="fa fa-feather ml-2"></i>تالیفات </a>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="/front/speechs.html"> <i class="fa fa-podcast ml-2"></i>سخنرانی ها </a>
                             </li>
-                            <li id="news" class="relative flex cursor-pointer items-center justify-center gap-1 px-2 py-1">
+                            <li id="news" class="relative flex cursor-pointer items-center justify-center gap-1 py-1 [&>a]:p-2">
                                 <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار </a>
                                 <i id="faAngleDown" class="fa fa-angle-down text-xs transition-all"></i>
                                 <span x-cloak id="newsDropdown" class="absolute -right-[40%] top-19 w-35 rounded-lg bg-gray-300 p-5 text-neutral-700">
@@ -83,19 +75,18 @@
                                     </ul>
                                 </span>
                             </li>
-                            <li class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-300">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
                                 <a href="#contactUs"> <i class="fa fa-phone ml-2"></i> تماس با ما </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
                 <span class="absolute -left-35 top-0 h-16 w-95 -skew-x-[70deg] bg-blue-700/50"> </span>
                 <div class="flex items-center justify-between">
                     <ul class="flex items-center justify-between gap-3 text-white/90">
                         <li x-data="{ sideNavLg : false }" class="relative">
                             <div @click="sideNavLg = true" class="ml-4 text-lg">
-                                <i class="fa fa-bars px-2 pt-1"></i>
+                                <i class="fa fa-bars cursor-pointer px-2 pt-1"></i>
                             </div>
                             <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="sideNavLg" @click="sideNavLg=false"></div>
                             <div
@@ -157,9 +148,9 @@
             </div>
         </header>
         <!-- header sm md  -->
-        <header class="w-full lg:hidden">
+        <header id="header-ms" class="fixed mb-16 w-full transform transition-transform duration-300 lg:hidden">
             <div class="flex w-screen items-center">
-                <ul class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-8 text-base shadow-2xl">
+                <ul class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-4 text-base shadow-2xl">
                     <li class="">
                         <img class="w-15" src="/img/flower.png" alt="flower" />
                     </li>
@@ -185,7 +176,7 @@
                             class="fixed right-0 top-0 z-[9999] rounded-lg"
                         >
                             <div class="z-40 flex h-screen w-50 flex-col bg-blue-600">
-                                <ul class="flex flex-col justify-stretch gap-7 px-9 text-base text-neutral-50 first:mt-17 last:mb-7 *:hover:text-amber-300 md:gap-5">
+                                <ul class="flex flex-col justify-stretch gap-7 px-9 text-base text-neutral-50 first:mt-17 last:mb-7 md:gap-5 [&>li:hover]:text-amber-300">
                                     <li>
                                         <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
                                     </li>
@@ -251,8 +242,6 @@
                 </div>
             </main>
         </div>
-
-        <!-- start footer -->
         <svg viewBox="0 160 1440 150">
             <path
                 fill="#1E3A8A"

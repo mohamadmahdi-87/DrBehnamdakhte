@@ -10,7 +10,7 @@ $(document).ready(function () {
         news: "اخبار",
         ProvincialNews: "اخبار استانی",
         RegionalNews: "اخبار منطقه ای",
-        speechs: "سخنرانی",
+        speechs: "سخنرانی های دکتر بهنام داخته",
         // ادامه ترجمه‌ها...
     };
 
@@ -306,3 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     // انجام انیمیشن هر ۳ ثانیه
 //     setInterval(showNextItem, 800);
 // });
+$(document).ready(function () {
+    var title = $("title").text();
+    $("#siteTitle").text(title);
+});
