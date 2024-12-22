@@ -1,4 +1,4 @@
-# 🌟 Mr. Bagheri's Site 🌟
+#🌟 Mr. Bagheri's Site 🌟
 
 Welcome to the official repository for Mr. Bagheri's site! This project is dedicated to creating a stunning and interactive website for our esteemed parliament representative, Mr. Bagheri.
 
