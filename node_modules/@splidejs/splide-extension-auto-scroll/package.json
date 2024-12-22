@@ -1,0 +1,62 @@
+{
+  "name": "@splidejs/splide-extension-auto-scroll",
+  "version": "0.5.3",
+  "description": "The Splide extension for continuously scrolling the slider.",
+  "author": "Naotoshi Fujita",
+  "license": "MIT",
+  "main": "dist/js/splide-extension-auto-scroll.cjs.js",
+  "module": "dist/js/splide-extension-auto-scroll.esm.js",
+  "jsdelivr": "dist/js/splide-extension-auto-scroll.min.js",
+  "types": "dist/types/index.d.ts",
+  "keywords": [
+    "splide",
+    "slider",
+    "carousel",
+    "slideshow",
+    "lightweight",
+    "touch",
+    "responsive",
+    "auto scroll"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Splidejs/splide-extension-auto-scroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Splidejs/splide-extension-auto-scroll/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@splidejs/splide": "^4.0.17",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "babel-jest": "^29.0.1",
+    "babel-loader": "^8.2.5",
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.15.6",
+    "eslint": "^8.23.0",
+    "jest": "^29.0.1",
+    "jest-environment-jsdom": "^29.0.1",
+    "rollup": "^2.79.0",
+    "rollup-plugin-esbuild": "4.10.1",
+    "ts-jest": "next",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.2"
+  },
+  "scripts": {
+    "develop": "node scripts/develop.js",
+    "build:js": "node scripts/build-script.js",
+    "build:module": "node scripts/build-module.js",
+    "build:all": "npm run build:js && npm run build:module && tsc --emitDeclarationOnly",
+    "jest": "jest --clearCache && jest",
+    "eslint": "eslint src"
+  },
+  "files": [
+    "dist"
+  ]
+}
