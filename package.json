@@ -13,6 +13,8 @@
         "plugins": "prettier-plugin-tailwindcss"
     },
     "dependencies": {
-        "tw-elements": "^1.1.0"
+        "tw-elements": "^1.1.0",
+        "@splidejs/splide": "^4.1.4",
+        "@splidejs/splide-extension-auto-scroll": "^0.5.3"
     }
 }

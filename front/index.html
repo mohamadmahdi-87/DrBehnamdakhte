@@ -3,176 +3,140 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <link href="\front\dist\tailwind-o.css" rel="stylesheet" />
         <link href="/front/css/style.css" rel="stylesheet" />
-        <link
-            rel="stylesheet"
-            href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
-        />
-        <script src="/front/js/alpine.min.js" rel="stylesheet"></script>
-        <script
-            type="text/javascript"
-            src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
-        ></script>
-        <script src="/front/js/TW.js"></script>
-        <link type="text/javascript" src="/front/js/script.js" />
-        <script type="text/javascript" src="\front\js\jquery.min.js"></script>
-        <title>AyandeRoshan</title>
+
+        <link href="/css/all.css" rel="stylesheet" />
+        <link href="/css/brands.css" rel="stylesheet" />
+        <link href="/css/regular.css" rel="stylesheet" />
+        <link href="/css/solid.css" rel="stylesheet" />
+        <link href="/css/all.min.css" rel="stylesheet" />
+
+        <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+
+        <script type="text/javascript" src="/front/js/alpine.min.js"></script>
+        <script type="text/javascript" src="/front/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/front\js\script.js"></script>
+        <script type="text/javascript" src="/front/js/TW.js"></script>
+
+        <link href="/node_modules/@splidejs/splide/dist/css/splide.min.css" rel="stylesheet" />
+        <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+        <script src="/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
     </head>
 
-    <body
-        id="top"
-        class="no-scrollbar relative overflow-hidden bg-white font-Vazir"
-    >
-        <header class="hidden lg:block">
-            <div
-                class="mx-auto my-auto flex h-20 w-full items-center justify-between bg-blue-600 p-3 text-lg shadow-2xl"
-            >
-                <div
-                    class="flex items-center justify-between gap-4 md:gap-6 lg:gap-8"
-                >
+    <body id="top" class="no-scrollbar relative overflow-hidden bg-white font-Vazir">
+        <!-- header lg -->
+        <header id="header-lg" class="fixed z-[9997] mb-16 hidden w-full transform transition-transform duration-300 lg:block">
+            <div class="mx-auto my-auto flex h-16 w-full items-center justify-between bg-blue-600 p-3 text-lg shadow-2xl">
+                <div class="flex items-center justify-between gap-4 md:gap-6 lg:gap-8">
                     <div class="w-35">
                         <a href="/front/index.html">
-                            <img
-                                src="/img/seyedalibagheri-lightGreen.png"
-                                alt="seyedalibagheri"
-                            />
+                            <span class="text-green-300"> دکتر بهنام داخته </span>
                         </a>
                     </div>
 
                     <div>
-                        <ul
-                            role="list"
-                            class="flex items-center justify-between gap-5 text-white/90"
-                        >
-                            <li
-                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-500"
-                            >
-                                <a href="/front/index.html">
-                                    <i class="fa fa-home ml-2"></i>خانه
-                                </a>
+                        <ul role="list" class="flex items-center justify-between gap-5 text-sm text-white/90 *:py-7">
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
+                                <a href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه اصلی </a>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
+                                <a href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
+                                <a href="/front/gallery.html"> <i class="fa fa-images ml-2"></i>گالری</a>
                             </li>
 
-                            <li
-                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-500"
-                            >
-                                <a
-                                    href="#aboutUs"
-                                    data-te-smooth-scroll-init
-                                    class=""
-                                >
-                                    <i class="fa fa-info-circle ml-2"></i>
-                                    درباره ما
-                                </a>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
+                                <a href="/front/articles.html"> <i class="far fa-file-alt ml-2"></i>مقالات </a>
                             </li>
-
-                            <li
-                                class="flex cursor-pointer items-center justify-center gap-1 px-2 py-1 transition-all hover:text-amber-500"
-                            >
-                                <a
-                                    href="#contactUs"
-                                    data-te-smooth-scroll-init
-                                    class=""
-                                >
-                                    <i class="fa fa-phone ml-2"></i> تماس با ما
-                                </a>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
+                                <a href="/front/books.html"> <i class="fa fa-feather ml-2"></i>تالیفات </a>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
+                                <a href="/front/speechs.html"> <i class="fa fa-podcast ml-2"></i>سخنرانی ها </a>
+                            </li>
+                            <li id="news" class="relative flex cursor-pointer items-center justify-center gap-1 py-1 [&>a]:p-2">
+                                <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار </a>
+                                <i id="faAngleDown" class="fa fa-angle-down text-xs transition-all"></i>
+                                <span x-cloak id="newsDropdown" class="absolute -right-[40%] top-19 w-35 rounded-lg bg-gray-300 p-5 text-neutral-700">
+                                    <ul class="flex flex-col gap-2">
+                                        <li class="hover:text-black">
+                                            <a href="/front/RegionalNews.html">اخبار استانی</a>
+                                        </li>
+                                        <li class="hover:text-black">
+                                            <a href="/front/CityNews.html">اخبار شهرستانی</a>
+                                        </li>
+                                        <li class="hover:text-black">
+                                            <a href="/front/ProvincialNews.html">اخبار منطقه ای</a>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </li>
+                            <li class="flex cursor-pointer items-center justify-center gap-1 py-1 transition-all hover:text-amber-300 [&>a]:p-2">
+                                <a href="#contactUs"> <i class="fa fa-phone ml-2"></i> تماس با ما </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-                <span
-                    class="absolute -left-35 top-0 h-20 w-110 -skew-x-[70deg] bg-blue-700/50"
-                >
-                </span>
+                <span class="absolute -left-35 top-0 h-16 w-95 -skew-x-[70deg] bg-blue-700/50"> </span>
                 <div class="flex items-center justify-between">
-                    <ul
-                        class="flex items-center justify-between gap-3 text-white/90"
-                    >
-                        <li x-data="{ user : false }" class="relative">
-                            <div
-                                @click="user = true"
-                                class="h-10 w-10 rounded-full bg-green-100/90"
-                            >
-                                <img
-                                    class="h-full w-full -scale-x-100 transform rounded-full object-cover"
-                                    src="/img/باقری خندان.jpg"
-                                    alt=""
-                                />
+                    <ul class="flex items-center justify-between gap-3 text-white/90">
+                        <li x-data="{ sideNavLg : false }" class="relative">
+                            <div @click="sideNavLg = true" class="ml-4 text-lg">
+                                <i class="fa fa-bars cursor-pointer px-2 pt-1"></i>
                             </div>
+                            <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="sideNavLg" @click="sideNavLg=false"></div>
                             <div
-                                class="fixed left-0 top-0 z-[9998] h-screen w-screen bg-black/50"
-                                x-show="user"
-                                @click="user=false"
-                            ></div>
-                            <div
-                                @click.outside="user=false"
+                                @click.away="sideNavLg=false"
+                                @keydown.escape="sideNavLg = false"
                                 x-transition:enter="transition-transform transition-opacity ease-out duration-300"
-                                x-transition:enter-start="opacity-0 transform -translate-x-20"
-                                x-transition:enter-end="opacity-100 transform translate-y-0"
+                                x-transition:enter-start="opacity-0 transform translate-x-20"
+                                x-transition:enter-end="opacity-100 transform -translate-y-0"
                                 x-transition:leave="transition  ease-in duration-300"
-                                x-transition:leave-end="opacity-0 transform -translate-x-20"
-                                x-show="user"
-                                class="absolute -left-2 top-20 z-[9999] rounded-lg bg-green-100"
+                                x-transition:leave-end="opacity-0 transform translate-x-20"
+                                x-show="sideNavLg"
+                                class="fixed right-0 top-0 z-[9999] rounded-lg"
                             >
-                                <!---->
-                                <div
-                                    class="z-40 flex w-72 flex-col rounded-lg bg-neutral-50 shadow-lg"
-                                >
-                                    <ul class="flex items-center">
-                                        <li
-                                            class="mx-5 my-3 h-14 w-14 overflow-hidden rounded-full bg-green-100/90"
-                                        >
-                                            <span class="">
-                                                <img
-                                                    class="h-full w-full -scale-x-100 transform rounded-full"
-                                                    src="/img/باقری خندان.jpg"
-                                                    alt="bagheri"
-                                                />
+                                <div class="z-40 flex h-[120vh] w-50 flex-col bg-blue-600">
+                                    <ul class="flex flex-col gap-5 px-9 text-base text-neutral-50 *:transition-all first:mt-17 last:mb-7 [&>*:hover]:text-amber-300">
+                                        <li>
+                                            <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/articles.html"> <i class="fas fa-clipboard ml-2"></i>مقالات</a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/books.html"> <i class="fas fa-graduation-cap ml-2"></i>تالیفات</a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/gallery.html"> <i class="fas fa-images ml-2"></i>گالری</a>
+                                        </li>
+                                        <li>
+                                            <a class="w-full" href="/front/speechs.html"> <i class="fas fa-book ml-2"></i>سخنرانی ها</a>
+                                        </li>
+                                        <li class="relative flex flex-col" id="news1">
+                                            <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار <i id="faAngleDown1" class="fa fa-angle-down text-xs transition-all"></i></a>
+                                            <span id="newsDropdown1" class="static right-0 w-full pr-7 pt-4 text-neutral-200">
+                                                <ul class="flex flex-col gap-2 *:list-disc">
+                                                    <li class="hover:text-emerald-300">
+                                                        <a href="/front/RegionalNews.html">اخبار استانی</a>
+                                                    </li>
+                                                    <li class="hover:text-emerald-300">
+                                                        <a href="/front/CityNews.html">اخبار شهرستانی</a>
+                                                    </li>
+                                                    <li class="hover:text-emerald-300">
+                                                        <a href="/front/ProvincialNews.html">اخبار منطقه ای</a>
+                                                    </li>
+                                                </ul>
                                             </span>
                                         </li>
-                                        <li class="flex justify-start">
-                                            <span
-                                                class="text-neutralf-700 h-max w-max bg-transparent"
-                                            >
-                                                سید علی باقری
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <hr
-                                        class="my-5 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
-                                    />
-                                    <ul
-                                        class="mr-5 flex flex-col gap-5 text-neutral-700 last:mb-7"
-                                    >
-                                        <li
-                                            class="flex items-center bg-transparent"
-                                        >
-                                            <a href="#aboutBagheri">
-                                                <i class="fa fa-user ml-2"></i
-                                                >سید علی باقری کیست؟</a
-                                            >
-                                        </li>
-                                        <li
-                                            class="flex items-center bg-transparent"
-                                        >
-                                            <a href="#successes">
-                                                <i class="fa fa-trophy ml-2"></i
-                                                >افتخارات</a
-                                            >
-                                        </li>
-                                        <li
-                                            class="flex cursor-not-allowed items-center bg-transparent"
-                                        >
-                                            <a
-                                                href="#Responsibilities"
-                                                class="cursor-not-allowed"
-                                            >
-                                                <i
-                                                    class="fas fa-clipboard ml-2 cursor-not-allowed"
-                                                ></i
-                                                >مسعولیت ها</a
-                                            >
+                                        <li>
+                                            <a class="w-full" href="#Social-activities"> <i class="fas fa-users ml-2"></i> تماس با ما </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -182,345 +146,232 @@
                 </div>
             </div>
         </header>
-        <!-- header lg -->
-        <header class="lg:hidden">
-            <div class="flex items-center">
-                <ul
-                    class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-8 text-base shadow-2xl"
-                >
-                    <li x-data="{ user : false }" class="relative">
-                        <div
-                            @click="user = true"
-                            class="h-10 w-10 rounded-full bg-green-100/90"
-                        >
-                            <img
-                                class="h-full w-full -scale-x-100 transform rounded-full object-cover"
-                                src="/img/باقری خندان.jpg"
-                                alt=""
-                            />
-                        </div>
-                        <div
-                            class="fixed left-0 top-0 z-[9998] h-screen w-screen bg-black/50"
-                            x-show="user"
-                            @click="user=false"
-                        ></div>
-                        <div
-                            @click.outside="user=false"
-                            x-transition:enter="transition-transform transition-opacity ease-out duration-300"
-                            x-transition:enter-start="opacity-0 transform -translate-x-20"
-                            x-transition:enter-end="opacity-100 transform translate-y-0"
-                            x-transition:leave="transition  ease-in duration-300"
-                            x-transition:leave-end="opacity-0 transform -translate-x-20"
-                            x-show="user"
-                            class="absolute -left-2 top-20 z-[9999] rounded-lg bg-green-100"
-                        >
-                            <!---->
-                            <div
-                                class="z-40 flex w-72 flex-col rounded-lg bg-neutral-50 shadow-lg"
-                            >
-                                <ul class="flex items-center">
-                                    <li
-                                        class="mx-5 my-3 h-14 w-14 overflow-hidden rounded-full bg-green-100/90"
-                                    >
-                                        <span class="">
-                                            <img
-                                                class="h-full w-full -scale-x-100 transform rounded-full"
-                                                src="/img/باقری خندان.jpg"
-                                                alt="bagheri"
-                                            />
-                                        </span>
-                                    </li>
-                                    <li class="flex justify-start">
-                                        <span
-                                            class="h-max w-max bg-transparent text-neutral-700"
-                                        >
-                                            سید علی باقری
-                                        </span>
-                                    </li>
-                                </ul>
-                                <hr
-                                    class="my-5 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
-                                />
-                                <ul
-                                    class="mr-5 flex flex-col gap-5 text-neutral-700 last:mb-7"
-                                >
-                                    <li
-                                        class="flex items-center bg-transparent"
-                                    >
-                                        <a href="#aboutBagheri">
-                                            <i class="fa fa-user ml-2"></i>سید
-                                            علی باقری کیست؟</a
-                                        >
-                                    </li>
-                                    <li
-                                        class="flex items-center bg-transparent"
-                                    >
-                                        <a href="#successes">
-                                            <i class="fa fa-trophy ml-2"></i
-                                            >افتخارات</a
-                                        >
-                                    </li>
-                                    <li
-                                        class="flex cursor-not-allowed items-center bg-transparent"
-                                    >
-                                        <a
-                                            href="#Responsibilities"
-                                            class="cursor-not-allowed"
-                                        >
-                                            <i
-                                                class="fas fa-clipboard ml-2 cursor-not-allowed"
-                                            ></i
-                                            >مسعولیت ها</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+        <!-- header sm md  -->
+        <header id="header-ms" class="fixed z-[9997] mb-16 w-full transform transition-transform duration-300 lg:hidden">
+            <div class="flex w-screen items-center">
+                <ul class="mx-auto my-auto flex h-full w-full flex-row-reverse items-center justify-between bg-blue-800 p-4 text-base shadow-2xl">
+                    <li class="">
+                        <img class="w-15" src="/img/flower.png" alt="flower" />
                     </li>
-
-                    <li class="flex items-center self-center">
-                        <a href="" class="w-35">
-                            <img
-                                src="/img/seyedalibagheri-lightGreen.png"
-                                alt="seyedalibagheri"
-                            />
+                    <li class="flex">
+                        <a href="/front/index.html">
+                            <span class="text-green-300"> دکتر بهنام داخته </span>
                         </a>
                     </li>
-                    <li x-data="{ navbar: false } ">
-                        <button
-                            @keydown.escape="navbar = false"
-                            class="flex items-center text-lg text-white"
-                            @click="navbar = true"
-                        >
-                            &#9776;
-                        </button>
-                        <!-- Navbar -->
+                    <li x-data="{ sideNavSm : false }" class="relative">
+                        <div @click="sideNavSm = true" class="text-lg">
+                            <i class="fa fa-bars px-2 pt-1 text-neutral-200"></i>
+                        </div>
+                        <div class="fixed left-0 top-0 z-[9998] h-[120vh] w-screen bg-black/50" x-show="sideNavSm" @click="sideNavSm=false"></div>
                         <div
-                            class="fixed left-0 top-0 z-[9000] h-screen w-screen bg-black/50"
-                            x-show="navbar"
-                            @click="navbar=false"
-                        ></div>
-                        <div
-                            @click.outside="navbar=false"
+                            @click.away="sideNavSm=false"
+                            @keydown.escape="sideNavSm = false"
                             x-transition:enter="transition-transform transition-opacity ease-out duration-300"
                             x-transition:enter-start="opacity-0 transform translate-x-20"
-                            x-transition:enter-end="opacity-100 transform translate-y-0"
-                            x-transition:leave="transition ease-in duration-300"
+                            x-transition:enter-end="opacity-100 transform -translate-y-0"
+                            x-transition:leave="transition  ease-in duration-300"
                             x-transition:leave-end="opacity-0 transform translate-x-20"
-                            class="fixed right-0 top-0 z-[9999] h-full w-2/3 bg-zinc-900 text-gray-50"
-                            x-show="navbar"
-                            x-cloak
+                            x-show="sideNavSm"
+                            class="fixed right-0 top-0 z-[9999] rounded-lg"
                         >
-                            <div
-                                @click="navbar=false"
-                                class="relative z-[9999]"
-                            >
-                                <i
-                                    class="fa fa-times-circle absolute left-4 top-4 z-[9999] text-orange-300"
-                                ></i>
+                            <div class="z-40 flex h-screen w-50 flex-col bg-blue-600">
+                                <ul class="flex flex-col justify-stretch gap-7 px-9 text-base text-neutral-50 first:mt-17 last:mb-7 md:gap-5 [&>li:hover]:text-amber-300">
+                                    <li>
+                                        <a class="w-full" href="/front/index.html"> <i class="fa fa-home ml-2"></i>صفحه‌اصلی </a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/bio.html"> <i class="fa fa-id-card ml-2"></i>بیوگرافی</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/articles.html"> <i class="fas fa-clipboard ml-2"></i>مقالات</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/books.html"> <i class="fas fa-feather ml-2"></i>تالیفات</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/gallery.html"> <i class="fas fa-images ml-2"></i>گالری</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="/front/speechs.html"> <i class="fas fa-book ml-2"></i>سخنرانی ها</a>
+                                    </li>
+                                    <li class="relative flex flex-col" id="newsSm">
+                                        <span class="flex items-center gap-3">
+                                            <a href="/front/news.html"> <i class="far fa-newspaper ml-2"></i>اخبار </a>
+                                            <i id="faAngleDownSm" class="fa fa-angle-down text-xs transition-all"></i>
+                                        </span>
+
+                                        <span id="newsDropdownSm" class="static right-0 w-full pr-7 pt-4 text-neutral-200">
+                                            <ul class="flex flex-col gap-2 *:list-disc">
+                                                <li class="hover:text-emerald-300">
+                                                    <a href="/front/RegionalNews.html">اخبار استانی</a>
+                                                </li>
+                                                <li class="hover:text-emerald-300">
+                                                    <a href="/front/CityNews.html">اخبار شهرستانی</a>
+                                                </li>
+                                                <li class="hover:text-emerald-300">
+                                                    <a href="/front/ProvincialNews.html">اخبار منطقه ای</a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a class="w-full" href="#Social-activities"> <i class="fas fa-users ml-2"></i> تماس با ما </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="z-[9999] py-10">
-                                <p
-                                    class="z-[9999] mx-auto flex items-center justify-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-lg font-black text-transparent"
-                                >
-                                    <a href="" class="z-[9999] w-45">
-                                        <img
-                                            src="/img/seyedalibagheri-lightGreen.png"
-                                            alt="seyedalibagheri"
-                                        />
-                                    </a>
-                                </p>
-                            </div>
-                            <ul
-                                class="text-white-90 z-[9999] flex flex-col gap-3 pr-6"
-                            >
-                                <div
-                                    class="text-white-90 z-[9999] flex flex-col gap-3"
-                                >
-                                    <ul class="flex w-max flex-col gap-3">
-                                        <li
-                                            class="flex gap-1 py-1 transition-all hover:text-amber-500"
-                                        ></li>
-                                        <li
-                                            class="animate-pulse cursor-pointer rounded-md border border-solid border-amber-500 px-2 py-1 transition-all hover:text-amber-500"
-                                        >
-                                            <a href="#aboutBagheri">
-                                                <i class="fa fa-user ml-2"></i
-                                                >سید علی باقری کیست؟</a
-                                            >
-                                        </li>
-                                        <li
-                                            class="flex cursor-pointer items-center gap-1 py-1 transition-all hover:text-amber-500"
-                                        >
-                                            <a href="#successes">
-                                                <i class="fa fa-trophy ml-2"></i
-                                                >افتخارات</a
-                                            >
-                                        </li>
-                                        <li
-                                            class="flex cursor-pointer items-center gap-1 py-1 transition-all hover:text-amber-500"
-                                        >
-                                            <a
-                                                href="#Responsibilities"
-                                                class="cursor-not-allowed"
-                                            >
-                                                <i
-                                                    class="fas fa-clipboard ml-2 cursor-not-allowed"
-                                                ></i
-                                                >مسعولیت ها</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </div>
-                            </ul>
                         </div>
                     </li>
                 </ul>
             </div>
         </header>
-        <!-- header sm md  -->
-        <!--  -->
+
         <!--enf of head -->
-        <main
-            class="mx-auto flex h-[80vh] flex-col items-center md:h-[100vh] md:flex-row-reverse md:justify-evenly"
-        >
-            <span
-                class="my-10 max-w-70 overflow-hidden rounded-full drop-shadow-2xl md:max-w-80"
-            >
-                <img
-                    class="rounded-full duration-500 ease-in-out hover:translate-x-3 hover:translate-y-3 hover:scale-110"
-                    src="/img/یاقری در سبزی22.jpg"
-                    alt=""
-                />
-            </span>
-            <h1
-                class="my-10 text-center text-xl font-bold max-sm:mx-16 md:text-3xl"
-            >
-                <span
-                    class="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent"
-                >
-                    سایت طراحی شده توسط
-                </span>
-                <span
-                    class="group relative ml-2 inline-flex items-center justify-center rounded-sm border-2 border-orange-500"
-                >
-                    <span
-                        class="inline-flex animate-bounce items-center justify-center p-1 text-black transition-all"
-                    >
-                        هنرجو
-                    </span>
-                    <span
-                        class="absolute -left-1 -top-1 z-10 rounded-full bg-orange-500 p-1 duration-700 ease-in-out group-hover:md:translate-x-[5.10rem]"
-                    >
-                    </span>
-                    <span
-                        class="absolute -right-1 -top-1 z-10 rounded-full bg-orange-500 p-1 duration-700 ease-in-out group-hover:md:translate-y-[45px]"
-                    >
-                    </span>
-                    <span
-                        class="absolute -bottom-1 -right-1 z-10 rounded-full bg-orange-500 p-1 duration-700 ease-in-out group-hover:md:-translate-x-[5.10rem]"
-                    >
-                    </span>
-                    <span
-                        class="absolute -bottom-1 -left-1 z-10 rounded-full bg-orange-500 p-1 duration-700 ease-in-out group-hover:md:-translate-y-[45px]"
-                    >
-                    </span>
-                </span>
-                <span
-                    class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
-                >
-                    های استاد باقری
-                </span>
-            </h1>
-        </main>
-        <section class="w-screen -skew-y-1 bg-yellow-700/25 pb-10">
-            <div class="flex skew-y-1 items-center justify-center">
-                <h1 class="md:text-3xl">سید علی باقری کیست؟</h1>
+        <!--enf of head -->
+        <!--enf of head -->
+        <main class="mt-30 flex flex-col items-center md:mx-auto md:mt-22 md:h-[100vh] md:flex-row-reverse md:justify-evenly">
+            <div class="flex basis-1/2 justify-center">
+                <div class="flex flex-wrap md:m-0 md:w-100">
+                    <div class="basis-1/2 p-1 opacity-0 transition-opacity duration-700 md:p-2" id="myGallery2">
+                        <img class="block h-30 w-50 rounded-lg object-cover object-center shadow-2xl" src="/img/dakhte/4nafareDakhte.jpg" />
+                    </div>
+                    <div class="basis-1/2 p-1 opacity-0 transition-opacity duration-700 md:p-2" id="myGallery1">
+                        <img class="block h-30 w-50 rounded-lg object-cover object-center shadow-2xl" src="/img/dakhte/dastjamieBehnamDakhte.jpg" />
+                    </div>
+
+                    <div class="basis-full p-1 opacity-0 transition-opacity duration-700 md:p-2" id="myGallery3">
+                        <img class="block h-50 w-full rounded-lg object-cover object-center shadow-2xl" src="/img/dakhte/poster4.jpg   " />
+                    </div>
+                </div>
             </div>
-        </section>
+            <div class="w-full basis-1/2 md:h-104">
+                <div class="my-10 text-center font-bold">
+                    <h1
+                        class="sticky -z-10 inline-flex animate-bounce items-center justify-center font-nastaliq text-6xl leading-[6rem] text-primary-900 drop-shadow-[1px_2px_2.5px_rgba(0,0,0,0.6)] md:text-5xl"
+                    >
+                        دکتر بهنام داخته
+                    </h1>
+                </div>
+                <div class="mx-7 my-20 flex flex-col justify-end gap-6 text-xl md:mx-20 [&>span>i]:mt-1 [&>span]:flex [&>span]:gap-2 [&>span]:text-gray-600">
+                    <span>
+                        <i class="fas fa-vote-yea relative h-fit w-fit text-rose-600">
+                            <span class="absolute -bottom-[30%] -right-[40%] h-6 w-6 rounded-full bg-rose-600/15"> </span>
+                        </i>
+                        کاندیدای دوازدهمین دوره انتخابات مجلس شوراي اسلامی ایران
+                    </span>
+                    <span>
+                        <i class="fas fa-briefcase relative h-fit w-fit text-green-600">
+                            <span class="absolute -bottom-[30%] -right-[40%] h-6 w-6 rounded-full bg-green-600/15"> </span>
+                        </i>
+                        مدیر سرمایه گذاری شرکت بین المالکی خاورمیانه
+                    </span>
+                    <span>
+                        <i class="fas fa-graduation-cap relative h-fit w-fit text-blue-600">
+                            <span class="absolute -bottom-[30%] -right-[40%] h-6 w-6 rounded-full bg-blue-600/15"> </span>
+                        </i>
+                        دکترای صنایع گرایش نساجی
+                    </span>
+                    <span>
+                        <i class="fas fa-chart-line relative h-fit w-fit text-orange-400">
+                            <span class="absolute -bottom-[30%] -right-[40%] h-6 w-6 rounded-full bg-orange-500/15"> </span>
+                        </i>
+                        کارشناس مدیریت گرایش بازرگانی
+                    </span>
+                </div>
+            </div>
+        </main>
+        <!--end of main-->
+
         <!-- start footer -->
-        <!-- start footer -->
-        <!-- start footer -->
-        <!-- start footer -->
-        <svg class="" viewBox="0 160 1440 150">
+        <svg viewBox="0 160 1440 150">
             <path
                 fill="#1E3A8A"
                 d="M0,256L60,261.3C120,267,240,277,360,266.7C480,256,600,224,720,229.3C840,235,960,277,1080,277.3C1200,277,1320,235,1380,213.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
             ></path>
         </svg>
         <footer class="z-10 w-full">
-            <section
-                class="flex h-62 w-full flex-col bg-blue-900 px-8 text-white/80 md:flex-row"
-            >
-                <div class="mt-4 flex md:mt-16 md:basis-1/2">
-                    <div id="contactUs" class="flex flex-col">
-                        راه های ارتباطی :
-                        <!--  -->
-                        <div class="mt-4 flex flex-col gap-3">
-                            <div
-                                class="flex flex-row gap-2 rounded-full text-lg max-md:p-1 md:px-2 md:py-1"
-                            >
-                                <a
-                                    href="https://www.instagram.com/tasmime_taze/"
-                                >
-                                    <i
-                                        class="text-instagram fab fa-instagram duration-300 ease-out"
-                                    ></i>
-                                </a>
-                                <a href="#">
-                                    <i
-                                        class="text-telegram fab fa-telegram-plane duration-300 ease-out"
-                                    ></i>
-                                </a>
-                                <a href="#">
-                                    <i
-                                        class="text-whatsapp fab fa-whatsapp duration-300 ease-out"
-                                    ></i>
-                                </a>
-                            </div>
-                            <contact class="flex flex-col text-sm lg:text-base">
-                                <span>
-                                    <i class="fa fa-phone"></i>
-                                    شماره تلفن:
-                                    <span
-                                        class="duration-500 ease-out hover:text-sky-500"
-                                        >09123456789</span
-                                    >
-                                </span>
-                                <span>
-                                    <i class="fa fa-at"></i>
-                                    ایمیل:
-                                    <span
-                                        class="duration-500 ease-out hover:text-sky-500"
-                                        >AyandeRoshan@gmail.com</span
-                                    >
-                                </span>
-                            </contact>
+            <section class="flex flex-col bg-blue-900 px-8 text-white/80">
+                <div class="mx-auto w-full max-w-screen-xl">
+                    <div class="grid grid-cols-1 gap-8 px-4 py-6 last:mb-10 md:grid-cols-4 lg:py-8">
+                        <div>
+                            <i class="fas fa-envelope inline"></i>
+                            <h2 id="contactUs" class="mr-1 inline text-xl">راه های ارتباطی</h2>
+                            <ul class="mt-6">
+                                <li class="mb-4">
+                                    <div class="flex flex-row items-center gap-2 rounded-full text-lg max-md:p-1 md:px-2 md:py-1">
+                                        <a href="https://t.me/tavarish4321">
+                                            <i class="fab fa-telegram-plane text-telegram duration-300 ease-out"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <i class="fas fa-newspaper inline"></i>
+                            <h2 class="mr-1 inline text-xl">
+                                <a href="/front/news.html">اخبار</a>
+                            </h2>
+                            <ul class="mt-6 text-neutral-300">
+                                <li class="mb-4">
+                                    <a href="/front/ProvincialNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار استانی </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="/front/CityNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار شهرستانی</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="/front/RegionalNews.html" class="duration-300 ease-out hover:text-emerald-300">اخبار منطقه ای</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a class="mb-6 flex items-center gap-2" href="front/books.html">
+                                <i class="fas fa-feather"></i>
+                                <h2 class="text-xl">تالیفات</h2>
+                            </a>
+                            <ul class="text-neutral-300">
+                                <li class="mb-4">
+                                    <a href="" class="duration-300 ease-out hover:text-emerald-300">عدم مدیریت ریزش سرمایه صنعت نساجی </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="" class="duration-300 ease-out hover:text-emerald-300">رپوژکتایل تکنولوژی برتر </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="" class="duration-300 ease-out hover:text-emerald-300">تجزیه و تحلیل نقظه سر به سر در صنعت </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="" class="duration-300 ease-out hover:text-emerald-300">مدیریت بهینه در صنعت</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <i class="far fa-file-alt inline"></i>
+                            <h2 class="mr-1 inline text-xl">
+                                <a href="/front/articles.html">مقالات</a>
+                            </h2>
+                            <ul class="mt-6 flex flex-col gap-4 text-neutral-300">
+                                <li>
+                                    <a href="/front/articles.html" class="duration-300 ease-out hover:text-emerald-300">اصلاح سطح سیلیسکونی نانو ذرات</a>
+                                </li>
+                                <li>
+                                    <a href="/front/articles.html" class="duration-300 ease-out hover:text-emerald-300">ترجمه مقاله نانو کامپوزیت های پلیمری در تکمیل منسوجات نساجی </a>
+                                </li>
+                                <li>
+                                    <a href="/front/articles.html" class="duration-300 ease-out hover:text-emerald-300">بررسی نانو در لباس ضد گلوله</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div
-                    id="aboutUs"
-                    data-te-smooth-scroll-init
-                    class="mt-4 flex flex-col md:mt-16 md:basis-1/2"
-                >
-                    <h1>درباره آینده روشن</h1>
-                    <p class="mt-4 w-full md:w-2/3">
-                        ''AyandeRoshan created by
-                        <a
-                            target="_blank"
-                            class="animate-pulse duration-500 ease-out hover:animate-spin hover:text-sky-500"
-                            href="https://github.com/mohamadmahdi-87/AyandeRoshan"
-                            >''AyandeRoshan`s team</a
-                        >
-                    </p>
-                </div>
             </section>
         </footer>
-        <button
-            id="backButton"
-            class="flex h-15 w-15 items-center justify-center rounded-full bg-blue-500 font-bold text-neutral-300 hover:bg-blue-700"
-        >
+        <footer>
+            <footer class="flex flex-col items-center bg-blue-900 text-center text-white">
+                <div class="w-full p-4 text-center" style="background-color: rgba(0, 0, 0, 0.2)">
+                    "Created by
+                    <a class="animate-pulse text-white" href="https://github.com/mohamadmahdi-87\">"mohamadmahdi tajkarimi</a>
+                </div>
+            </footer>
+        </footer>
+        <button id="backButton" title="برگشت به بالا" class="flex h-15 w-15 items-center justify-center rounded-full bg-blue-500 font-bold text-neutral-50 hover:bg-blue-700">
             <i class="fa fa-arrow-up"></i>
         </button>
     </body>
