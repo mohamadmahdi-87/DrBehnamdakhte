@@ -1496,6 +1496,11 @@ input[type="range"]:active::-webkit-slider-thumb {
   height: 100vh;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .max-h-\[calc\(100\%-64px\)\] {
   max-height: calc(100% - 64px);
 }
@@ -1710,6 +1715,19 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-8\/12 {
+  width: 66.666667%;
+}
+
+.w-10\/12 {
+  width: 83.333333%;
 }
 
 .min-w-0 {
@@ -5403,8 +5421,17 @@ input[type="range"]:active::-webkit-slider-thumb {
     margin-bottom: 0px;
   }
 
+  .md\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:mt-22 {
+    margin-top: 5.5rem;
   }
 
   .md\:h-104 {
@@ -5421,6 +5448,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 
   .md\:w-100 {
     width: 25rem;
+  }
+
+  .md\:w-60 {
+    width: 15rem;
   }
 
   .md\:grid-cols-3 {
